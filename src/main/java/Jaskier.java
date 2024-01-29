@@ -18,8 +18,13 @@ public class Jaskier {
 
     public Jaskier() throws LoginException, ClassNotFoundException, SQLException {
         //Récupérer le token depuis .env
-        config=Dotenv.configure().ignoreIfMissing().load();
-        String token = config.get("TOKEN");
+        this.config=Dotenv.configure().ignoreIfMissing().load();
+        String token = this.config.get("TOKEN");
+
+        if(token==null){
+            System.out.println("ERREUR : token null");
+            System.exit(-1);
+        }
 
         //Connecter le code au bot
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
@@ -30,7 +35,6 @@ public class Jaskier {
 
         shardManager.addEventListener( new CommandManager(config));
     }
-
 
     public ShardManager getShardManager() {
         return shardManager;
@@ -43,13 +47,12 @@ public class Jaskier {
     public static void main(String[] args) {
 
         try {
-            Jaskier tavernier = new Jaskier();
+            new Jaskier();
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
         } catch (SQLException e) {
             System.out.println("ERREUR : SQL Exception");
-            System.out.println(e.toString());
         } catch (ClassNotFoundException e) {
             System.out.println("ERREUR : ClassNotFound Exception");
         }
