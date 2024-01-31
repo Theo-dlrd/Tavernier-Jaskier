@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
 import javax.security.auth.login.LoginException;
 import java.sql.*;
+import java.util.ArrayList;
 
 
 public class Jaskier {
@@ -17,8 +18,8 @@ public class Jaskier {
 
 
     public Jaskier() throws LoginException, ClassNotFoundException, SQLException {
-        //Récupérer le token depuis .env
-        this.config=Dotenv.configure().ignoreIfMissing().load();
+
+        this.config=Dotenv.configure().load();
         String token = this.config.get("TOKEN");
 
         if(token==null){
@@ -29,11 +30,11 @@ public class Jaskier {
         //Connecter le code au bot
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setActivity(Activity.watching("You"));
+        builder.setActivity(Activity.playing("D&D"));
         builder.enableIntents(GatewayIntent.GUILD_MESSAGES);
         this.shardManager = builder.build();
 
-        shardManager.addEventListener( new CommandManager(config));
+        shardManager.addEventListener( new CommandManager(config, this.shardManager));
     }
 
     public ShardManager getShardManager() {
@@ -53,6 +54,7 @@ public class Jaskier {
             System.out.println("ERREUR : Token non valide !");
         } catch (SQLException e) {
             System.out.println("ERREUR : SQL Exception");
+            System.out.println(e.toString());
         } catch (ClassNotFoundException e) {
             System.out.println("ERREUR : ClassNotFound Exception");
         }

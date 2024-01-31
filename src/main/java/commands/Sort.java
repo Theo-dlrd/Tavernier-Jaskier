@@ -46,7 +46,7 @@ public class Sort {
         this.ecole = resultSet.getString("nom_ecole");
         this.duree_incantation = res.getString("duree_incantation");
         this.portee = res.getString("portee");
-        this.composante = res.getString("composante");
+        this.composante = res.getString("composantes");
         this.duree_sort = res.getString("duree_sort");
         this.description = res.getString("description");
     }
@@ -55,14 +55,60 @@ public class Sort {
 
     public EmbedBuilder createEmbed(){
         EmbedBuilder embed = new EmbedBuilder();
+        //Nom du sort
         embed.setTitle(this.nom_sort);
+        //Ecole du sort
         embed.addField("Ecole",this.ecole+"", true);
-        embed.addField("Niveau",this.niveau_sort+"", true);
+        //Niveau du sort
+        if(this.niveau_sort==0){
+            embed.addField("Niveau","Sort mineur", true);
+        }
+        else if(this.niveau_sort==-1){
+            embed.addField("Niveau","Sort de classe", true);
+        }
+        else if(this.niveau_sort==-2){
+            embed.addField("Niveau","Sort de race", true);
+        }
+        else{
+            embed.addField("Niveau",this.niveau_sort+"", true);
+        }
+        //Durée d'incantation
         embed.addField("Durée d'incantation", this.duree_incantation, true);
+        //Portée
         embed.addField("Portée", this.portee, true);
+        //Composantes
         embed.addField("Composantes", this.composante, true);
+        //Durée du sort
         embed.addField("Durée du sort", this.duree_sort, true);
-        embed.addField("Description",this.description, false);
+        //Description du sort
+        if (this.description.length() <= 1024) {
+            // Ajouter la description comme un seul champ s'il n'y a pas de dépassement
+            embed.addField("Description", this.description, false);
+        } else {
+            // Diviser la description en morceaux plus petits sans couper une phrase
+            int descriptionLength = this.description.length();
+            int chunkSize = 1024;
+            int i_desc = 1;
+
+            for (int i = 0; i < descriptionLength; i += chunkSize) {
+                int endIndex = Math.min(i + chunkSize, descriptionLength);
+
+                // Revenir en arrière pour trouver le dernier point ajouté
+                int carSupp=0;
+                while (endIndex < descriptionLength && this.description.charAt(endIndex - 1) != '.') {
+                    carSupp++;
+                    endIndex--;
+                }
+
+                String chunk = this.description.substring(i, endIndex);
+
+                embed.addField("Description (partie " + i_desc + ")", chunk, false);
+                i_desc++;
+
+                i-=carSupp;
+            }
+        }
+
         return embed;
     }
 
