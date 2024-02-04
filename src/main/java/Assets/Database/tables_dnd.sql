@@ -8,40 +8,42 @@ VALUES ('Abjuration'),('Divination'),('Enchantement'),('Evocation'),('Illusion')
 
 CREATE TABLE sort(
     id_sort serial PRIMARY KEY,
-    nom_sort varchar(50),
+    nom_sort varchar(100),
     niveau_sort int,
     ecole_sort int,
-    duree_incantation varchar(50),
-    portee varchar(50),
-    composantes varchar(100),
-    duree_sort varchar(100),
-    description text
+    duree_incantation varchar(200),
+    portee varchar(200),
+    composantes varchar(200),
+    duree_sort varchar(200),
+    description text,
+    img_sort text
 );
 
 CREATE TABLE classe(
     id_classe serial PRIMARY KEY,
     nom_classe varchar(50),
-    desc text
+    description text,
     de_vie varchar(10),
     caract_principale varchar(50),
     jet_sauv varchar(50),
-    arm_skill text
+    arm_skill text,
+    img_classe text
 );
 
-INSERT INTO classe(nom_classe,desc,de_vie,caract_principale,jet_sauv,arm_skill)
+INSERT INTO classe(nom_classe,description,de_vie,caract_principale,jet_sauv,arm_skill,img_classe)
 VALUES
-('Barbare','Un féroce combattant primitif capable de devenir enragé.','d12','Force','Force et Constitution','Armures légères et intermédiaires, bouclier, armes courantes et de guerre'),
-('Barde','Un mage capable d''inspirer ses camarades et dont les pouvoirs font écho à la musique de la création.','d8','Charisme','Dextérité et Charisme','Armure légère, armes courantes, arbalète de poing, épée longue, rapière, épée courte'),
-('Clerc','Un champion ecclésiastique qui use de magie divine au service d''une puissance supérieure.','d8','Sagesse','Sagesse et Charisme','Armures légères et intermédiaires, boucliers, armes courantes'),
-('Druide','Un adepte de l''antique religion qui manie les pouvoirs de la nature (la lumière de la lune et la croissance végétale, le feu et la foudre) et peut revêtir une forme sauvage.', 'd8','Sagesse','Intelligence et Sagesse','Armures légères et intermédiaires (jamais en métal), bouclier (jamais en métal), gourdin, fléchette, javeline, masse d''armes, bâton, cimeterre, serpe, fronde, lance'),
-('Ensorceleur','Un mage qui tire ses pouvoirs magiques innés de sa lignée ou d''un don.','d6','Charisme','Constitution et Charisme','Dague, fléchette, fronde, bâton, arbalète légère'),
-('Guerrier','Un maître de guerre sachant utiliser tout un éventail d''armes et d''armures.','d10','Force ou Dextérité','Force et Constitution','Toutes les armures, bouclier, armes courantes et de guerre'),
-('Magicien','Un utilisateur de magie académique capable de manipuler le tissu de la réalité','d6','Intelligence','Intelligence et Sagesse','Dague, fléchette, fronde, bâton, arbalète légère'),
-('Moine','Un maître des arts martiaux qui puise dans sa puissance corporelle afin d''atteindre la perfection physique et spirituelle','d8','Dextérité et Sagesse','Force et Dextérité','Armes courantes, épée courte'),
-('Paladin','Un guerrier saint lié par un serment sacré','d10','Force et Charsime','Sagesse et Charisme','Toutes les armures, bouclier, armes courantes et de guerre'),
-('Rodeur','Un combattant qui recourt aux prouesses martiales et à la magie du monde naturel pour lutter contre les dangers rôdant en lisière de la civilisation','d10','Dextérité et Sagesse','Force et Dextérité','Armures légères et intermédiaires, bouclier, armes courantes et de guerre'),
-('Roublard','Une crapule qui surmonte les obstacles et triomphe de ses ennemis grâce à sa discrétion et ses ruses','d8','Dextérité','Dextérité et Intelligence','Armures légères, armes courantes, arbalète de poing, épée longue, rapière, épée courte'),
-('Sorcier','Un mage qui doit ses pouvoirs au marché passé avec une entité extraplanaire','d8','Charisme','Sagesse et Charisme','Armures légères, armes courantes');
+('Barbare','Un féroce combattant primitif capable de devenir enragé.','d12','Force','Force et Constitution','Armures légères et intermédiaires, bouclier, armes courantes et de guerre','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/barbarian_class_icon_alt.png'),
+('Barde','Un mage capable d''inspirer ses camarades et dont les pouvoirs font écho à la musique de la création.','d8','Charisme','Dextérité et Charisme','Armure légère, armes courantes, arbalète de poing, épée longue, rapière, épée courte','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/bard_icon_class_bg3_wiki_guide.png'),
+('Clerc','Un champion ecclésiastique qui use de magie divine au service d''une puissance supérieure.','d8','Sagesse','Sagesse et Charisme','Armures légères et intermédiaires, boucliers, armes courantes','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/cleric_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Druide','Un adepte de l''antique religion qui manie les pouvoirs de la nature (la lumière de la lune et la croissance végétale, le feu et la foudre) et peut revêtir une forme sauvage.', 'd8','Sagesse','Intelligence et Sagesse','Armures légères et intermédiaires (jamais en métal), bouclier (jamais en métal), gourdin, fléchette, javeline, masse d''armes, bâton, cimeterre, serpe, fronde, lance','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/druid_class_icon_1_baldursgate3_wiki_guide_75px.png'),
+('Ensorceleur','Un mage qui tire ses pouvoirs magiques innés de sa lignée ou d''un don.','d6','Charisme','Constitution et Charisme','Dague, fléchette, fronde, bâton, arbalète légère','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/sorcerer_class_icon_baldurs_gate_3_wiki_guide_250px.png'),
+('Guerrier','Un maître de guerre sachant utiliser tout un éventail d''armes et d''armures.','d10','Force ou Dextérité','Force et Constitution','Toutes les armures, bouclier, armes courantes et de guerre','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/fighter_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Magicien','Un utilisateur de magie académique capable de manipuler le tissu de la réalité','d6','Intelligence','Intelligence et Sagesse','Dague, fléchette, fronde, bâton, arbalète légère','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/warlock_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Moine','Un maître des arts martiaux qui puise dans sa puissance corporelle afin d''atteindre la perfection physique et spirituelle','d8','Dextérité et Sagesse','Force et Dextérité','Armes courantes, épée courte','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/monk_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Paladin','Un guerrier saint lié par un serment sacré','d10','Force et Charsime','Sagesse et Charisme','Toutes les armures, bouclier, armes courantes et de guerre','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/paladin_class_bg3_wiki_guide75px.png'),
+('Rodeur','Un combattant qui recourt aux prouesses martiales et à la magie du monde naturel pour lutter contre les dangers rôdant en lisière de la civilisation','d10','Dextérité et Sagesse','Force et Dextérité','Armures légères et intermédiaires, bouclier, armes courantes et de guerre','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/ranger_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Roublard','Une crapule qui surmonte les obstacles et triomphe de ses ennemis grâce à sa discrétion et ses ruses','d8','Dextérité','Dextérité et Intelligence','Armures légères, armes courantes, arbalète de poing, épée longue, rapière, épée courte','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/rogue_class_icon_baldursgate3_wiki_guide_75px.png'),
+('Sorcier','Un mage qui doit ses pouvoirs au marché passé avec une entité extraplanaire','d8','Charisme','Sagesse et Charisme','Armures légères, armes courantes','https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/wizard_class_icon_baldursgate3_wiki_guide_75px.png');
 
 CREATE TABLE race(
     id_race serial PRIMARY KEY,
@@ -56,12 +58,12 @@ CREATE TABLE sortClasse(
     id_sort int REFERENCES sort(id_sort)
 );
 
-INSERT INTO sortClasse
+INSERT INTO sortclasse
 VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Bénédiction')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Bouclier de la foi')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Détection de la magie')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Détection du mal et du bien')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Détection du bien et du mal')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Détection du poison et des maladies')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Duel forcé')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Faveur divine')),
@@ -94,13 +96,28 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de pureté')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de vie')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Bannissement')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Frappe assomante')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Frappe assommante')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Localiser une créature')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Protection contre la mort')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Cercle de pouvoir')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Coercition mystique')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Dissipation du mal et du bien')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Frappe du banissement')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Frappe du bannissement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Relever les morts')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Vague destructrice'));                                                                                    '
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Vague destructrice')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Sens divin')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Imposition des mains')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Châtiment divin')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de protection')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de courage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Contact purifiant'));
 
+
+INSERT INTO sortclasse
+VALUES
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Amis')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Imposition des mains')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Châtiment divin')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de protection')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de courage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contact purifiant'));

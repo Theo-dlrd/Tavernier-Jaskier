@@ -1,11 +1,16 @@
 package commands;
 
+import com.sun.jdi.Field;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import org.postgresql.util.PSQLException;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Sort {
@@ -18,6 +23,7 @@ public class Sort {
     private String composante;
     private String duree_sort;
     private String description;
+    public String img_sort;
 
     public Sort(ResultSet res, Connection connexion) throws SQLException {
 
@@ -42,23 +48,24 @@ public class Sort {
             this.ecole = "Aucune";
         }
 
-
         this.ecole = resultSet.getString("nom_ecole");
         this.duree_incantation = res.getString("duree_incantation");
         this.portee = res.getString("portee");
         this.composante = res.getString("composantes");
         this.duree_sort = res.getString("duree_sort");
         this.description = res.getString("description");
+        this.img_sort = res.getString("img_sort");
     }
 
-
-
     public EmbedBuilder createEmbed(){
+
         EmbedBuilder embed = new EmbedBuilder();
+        embed.setThumbnail(this.img_sort);
         //Nom du sort
         embed.setTitle(this.nom_sort);
         //Ecole du sort
-        embed.addField("Ecole",this.ecole+"", true);
+        if(this.ecole!=null)
+            embed.addField("Ecole",this.ecole+"", true);
         //Niveau du sort
         if(this.niveau_sort==0){
             embed.addField("Niveau","Sort mineur", true);
@@ -73,13 +80,17 @@ public class Sort {
             embed.addField("Niveau",this.niveau_sort+"", true);
         }
         //Durée d'incantation
-        embed.addField("Durée d'incantation", this.duree_incantation, true);
+        if(this.duree_incantation!=null)
+            embed.addField("Durée d'incantation", this.duree_incantation, true);
         //Portée
-        embed.addField("Portée", this.portee, true);
+        if(this.portee!=null)
+            embed.addField("Portée", this.portee, true);
         //Composantes
-        embed.addField("Composantes", this.composante, true);
+        if(this.composante!=null)
+            embed.addField("Composantes", this.composante, true);
         //Durée du sort
-        embed.addField("Durée du sort", this.duree_sort, true);
+        if(this.duree_sort!=null)
+            embed.addField("Durée du sort", this.duree_sort, true);
         //Description du sort
         if (this.description.length() <= 1024) {
             // Ajouter la description comme un seul champ s'il n'y a pas de dépassement
@@ -111,6 +122,4 @@ public class Sort {
 
         return embed;
     }
-
-
 }
