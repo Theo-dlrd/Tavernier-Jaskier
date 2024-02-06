@@ -109,4 +109,4 @@ VALUES
     'instantanée',
     'Vous touchez une créature morte au cours de la minute précédente. Elle revient à la vie avec 1 point de vie. Ce sort ne ramène pas à la vie les créatures mortes de vieillesse et ne restaure pas les parties manquantes du corps.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/revivify_necromancy_spell_bg3_wiki_150px.png'
-);
+)ON CONFLICT(nom_sort) DO NOTHING;

@@ -65,4 +65,4 @@ VALUES
     'instantanée',
     'À partir du niveau 14, vous pouvez utiliser votre action pour mettre fin à un sort qui vous affecte ou qui affecte une créature consentante que vous touchez.' || E'\n' || 'Vous pouvez utiliser cette aptitude un nombre de fois égal à votre modificateur de Charisme (avec un minimum d''une fois). Vous récupérez les utilisations dépensées dès que vous terminez un long repos.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/holy_rebuke_action_paladin_bg3_wiki_150px.png'
-);
+)ON CONFLICT(nom_sort) DO NOTHING;

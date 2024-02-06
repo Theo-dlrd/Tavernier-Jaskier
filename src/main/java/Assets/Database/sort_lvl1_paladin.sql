@@ -164,4 +164,4 @@ VALUES
     'instantanée',
     'La créature que vous touchez récupère un nombre de points de vie égal à 1d8 + votre modificateur de caractéristique d''incantation. Ce sort n''a aucun effet sur les morts-vivants et les créatures artificielles.' || E'\n' || '**À plus haut niveau**, Si vous lancez ce sort en utilisant un emplacement de niveau 2 ou plus, les soins augmentent de 1d8 par niveau au-delà du 1er.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/cure_wounds_spell_baldursgate3_wiki_guide_150px.png'
-);
+)ON CONFLICT(nom_sort) DO NOTHING;
