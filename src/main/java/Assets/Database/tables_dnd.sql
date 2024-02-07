@@ -19,6 +19,22 @@ CREATE TABLE sort(
     img_sort text
 );
 
+CREATE OR REPLACE FUNCTION verif_nom_sort_existence()
+    RETURNS TRIGGER AS $$
+    BEGIN
+        IF EXISTS (SELECT 1 FROM sort WHERE nom_sort = NEW.nom_sort) THEN
+            RAISE EXCEPTION 'Le nom du sort % existe déjà dans la base de données.', NEW.nom_sort;
+        END IF;
+        RETURN NEW;
+    END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trig_verif_nom_sort_existence
+BEFORE INSERT ON sort
+FOR EACH ROW
+EXECUTE FUNCTION verif_nom_sort_existence();
+
+
 CREATE TABLE classe(
     id_classe serial PRIMARY KEY,
     nom_classe varchar(50),

@@ -109,4 +109,4 @@ VALUES
     '1 heure',
     'Grâce à ce sort, la créature consentante que vous touchez est capable de voir les choses telles qu''elles sont réellement. Pendant toute la durée du sort, la cible bénéficie de _vision parfaite_, repère les portes dérobées cachées par magie et voit le plan éthéré, tout cela dans un rayon de 36 mètres.',
     NULL
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

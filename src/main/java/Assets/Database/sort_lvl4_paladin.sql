@@ -65,4 +65,4 @@ VALUES
     '8 heures',
     'Vous touchez une créature et lui donnez une protection relative contre la mort.' || E'\n' || 'Quand elle devrait tomber à O point de vie pour la première fois suite à des dégâts, elle tombe à la place à 1 point de vie et le sort se termine.' || E'\n' || 'Si le sort est encore actif quand la cible est soumise à un effet qui devrait la tuer sur-le-champ sans lui infliger de dégâts, l''effet est annulé contre cette cible et le sort se termine.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/deathward-spell-bg3-wiki-guide-64px.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

@@ -175,4 +175,4 @@ VALUES
     'concentration, jusqu''à 1 round',
     'Vous tendez la main et pointez du doigt une cible à portée. Votre magie vous donne un bref aperçu de ses défenses. À votre prochain tour, vous êtes avantagé lors de votre premier jet d''attaque contre elle, à condition que le sort ne se soit pas terminé avant.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/true_strike_spell_baldursgate3_wiki_guide_150px_2.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

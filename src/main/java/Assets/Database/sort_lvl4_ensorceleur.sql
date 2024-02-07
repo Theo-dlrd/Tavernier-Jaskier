@@ -98,4 +98,4 @@ VALUES
     'instantanée',
     'Des grêlons durs comme de la pierre s''abattent dans un cylindre de 6 mètres de rayon pour 12 mètres de haut, centré sur un point à portée. Chaque créature présente dans le cylindre doit faire un jet de sauvegarde de Dextérité. Celles qui échouent subissent 2d8 dégâts contondants et 4d6 dégâts de froid tandis que les autres en subissent la moitié seulement.' || E'\n' || 'Les grêlons transforment la zone en terrain difficile jusqu''à la fin de votre prochain tour.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 5 ou plus, les dégâts contondants augmentent de 1d8 par niveau au-delà du 4e.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/ice_storm_spell_evocation_school_baldursgate3_wiki_guide_64px.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

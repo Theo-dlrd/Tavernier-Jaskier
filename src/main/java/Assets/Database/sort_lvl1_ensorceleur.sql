@@ -208,4 +208,4 @@ VALUES
     'instantanée',
     'Une vague de force tonnante émane de vous. Chaque créature située dans un cube de 4,50 mètres d''arête partant de vous doit faire un jet de sauvegarde de Constitution. Les créatures qui échouent subissent 2d8 dégâts de tonnerre et sont repoussées de 3 mètres en face de vous. Les autres subissent seulement la moitié des dégâts et ne sont pas repoussées.' || E'\n' || 'De plus, les objets qui ne sont pas arrimés et se trouvent entièrement englobés dans la zone affectée sont automatiquement repoussés de 3 mètres à l''opposé de vous. Le sort émet un grondement de tonnerre qui s''entend dans un rayon de 90 mètres.' || E'\n' || '**À plus haut niveau**, si vous lancez ce sort en utilisant un emplacement de niveau 2 ou plus, les dégâts augmentent de 1d8 par niveau au-delà du 1er.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/thunderwave_spell_baldursgate3_wiki_guide_150px_2.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

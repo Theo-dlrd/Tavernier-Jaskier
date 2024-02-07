@@ -65,4 +65,4 @@ VALUES
     'instantanée',
     'Vous frappez le sol et créez une onde d''énergie divine qui se répand alentour. Toutes les créatures de votre choix situées dans un rayon de 9 mètres autour de vous doivent faire un jet de sauvegarde de Constitution. Celles qui échouent subissent 5d6 dégâts de tonnerre et 5d6 dégâts radiants ou nécrotiques (à vous de choisir). De plus, elles sont projetées à terre. Celles qui réussissent subissent seulement la moitié des dégâts et ne tombent pas à terre.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/destructive-wave-spells-bg3-wiki-guide-min.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

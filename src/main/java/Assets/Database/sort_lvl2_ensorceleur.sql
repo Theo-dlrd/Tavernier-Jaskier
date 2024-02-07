@@ -252,4 +252,4 @@ VALUES
     '1 heure',
     'Pendant toute la durée du sort, vous voyez les créatures et les objets invisibles comme s''ils étaient bien visibles et vous pouvez aussi observer le plan éthéré. Les créatures et les objets éthérés vous apparaissent comme des silhouettes translucides ët fantomatiques.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/seeinvisibility_spell_divination_school_baldursgate3_wiki_guide_64px.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);

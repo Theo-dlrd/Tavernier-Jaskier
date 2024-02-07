@@ -197,4 +197,4 @@ VALUES
     'concentration, jusqu''à 10 minutes',
     'Vous touchez une créature consentante et lui conférez la capacité de voler à une vitesse de 18 mètres pendant toute la durée du sort. Si la cible se trouve dans les airs quand le sort se termine, elle tombe, à moins de pouvoir arrêter sa chute.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 4 ou plus, vous pouvez viser une créature de plus par niveau au-delà du 3e.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/fly_spell_bg3_wiki_guide64px.png'
-)ON CONFLICT(nom_sort) DO NOTHING;
+);
