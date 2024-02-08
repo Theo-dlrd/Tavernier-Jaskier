@@ -1,6 +1,8 @@
 package commands;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -10,6 +12,7 @@ import net.dv8tion.jda.api.interactions.commands.build.CommandData;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import org.jetbrains.annotations.NotNull;
+import net.dv8tion.jda.api.EmbedBuilder;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +38,7 @@ public class CommandManager extends ListenerAdapter {
         if (command.equals("sort")) {
             //event.reply("Vous cherchez une commande cher aventurier ?").queue();
 
+            Statement statement;
             try {
                 OptionMapping messageOption = event.getOption("nom");
                 String queryExact = "SELECT * FROM sort WHERE nom_sort='"+Objects.requireNonNull(messageOption).getAsString()+"' LIMIT 1;";

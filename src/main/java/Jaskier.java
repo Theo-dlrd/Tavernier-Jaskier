@@ -17,20 +17,24 @@ public class Jaskier {
 
 
     public Jaskier() throws LoginException, ClassNotFoundException, SQLException {
-        //Récupérer le token depuis .env
-        config=Dotenv.configure().ignoreIfMissing().load();
-        String token = config.get("TOKEN");
+
+        this.config=Dotenv.configure().load();
+        String token = this.config.get("TOKEN");
+
+        if(token==null){
+            System.out.println("ERREUR : token null");
+            System.exit(-1);
+        }
 
         //Connecter le code au bot
         DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(token);
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setActivity(Activity.watching("You"));
+        builder.setActivity(Activity.playing("D&D"));
         builder.enableIntents(GatewayIntent.GUILD_MESSAGES);
         this.shardManager = builder.build();
 
-        shardManager.addEventListener( new CommandManager(config));
+        shardManager.addEventListener( new CommandManager(config, this.shardManager));
     }
-
 
     public ShardManager getShardManager() {
         return shardManager;
@@ -43,7 +47,7 @@ public class Jaskier {
     public static void main(String[] args) {
 
         try {
-            Jaskier tavernier = new Jaskier();
+            new Jaskier();
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
