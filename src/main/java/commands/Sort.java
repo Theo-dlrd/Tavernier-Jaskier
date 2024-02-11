@@ -1,28 +1,19 @@
 package commands;
 
-import com.sun.jdi.Field;
-import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.MessageEmbed;
 import org.postgresql.util.PSQLException;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class Sort {
 
-    private String nom_sort=null;
-    private int niveau_sort=-100;
-    private String ecole=null;
-    private String duree_incantation=null;
-    private String portee=null;
-    private String composante=null;
-    private String duree_sort=null;
-    private String description=null;
+    private final String nom_sort;
+    private final int niveau_sort;
+    private final String ecole;
+    private final String duree_incantation;
+    private final String portee;
+    private final String composante;
+    private final String duree_sort;
+    private final String description;
     public String img_sort;
 
     public Sort(ResultSet res, Connection connexion) throws SQLException {
@@ -66,7 +57,7 @@ public class Sort {
 
         //Ecole du sort
         if(this.ecole!=null)
-            embed.addField("Ecole",this.ecole+"", true);
+            embed.addField("Ecole", this.ecole, true);
 
         //Niveau du sort
         if(this.niveau_sort==0){
