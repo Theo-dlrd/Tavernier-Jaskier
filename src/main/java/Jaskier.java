@@ -11,15 +11,11 @@ import java.sql.*;
 
 public class Jaskier {
 
-    private final Dotenv config;
-
-    private final ShardManager shardManager;
-
 
     public Jaskier() throws LoginException, ClassNotFoundException, SQLException {
 
-        this.config=Dotenv.configure().load();
-        String token = this.config.get("TOKEN");
+        Dotenv config = Dotenv.configure().load();
+        String token = config.get("TOKEN");
 
         if(token==null){
             System.out.println("ERREUR : token null");
@@ -31,29 +27,20 @@ public class Jaskier {
         builder.setStatus(OnlineStatus.ONLINE);
         builder.setActivity(Activity.playing("D&D"));
         builder.enableIntents(GatewayIntent.GUILD_MESSAGES);
-        this.shardManager = builder.build();
+        ShardManager shardManager = builder.build();
 
-        shardManager.addEventListener( new CommandManager(config, this.shardManager));
-    }
-
-    public ShardManager getShardManager() {
-        return shardManager;
-    }
-
-    public Dotenv getConfig() {
-        return config;
+        shardManager.addEventListener( new CommandManager(config, shardManager));
     }
 
     public static void main(String[] args) {
 
         try {
-            new Jaskier();
+            Jaskier jaskier = new Jaskier();
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
         } catch (SQLException e) {
             System.out.println("ERREUR : SQL Exception");
-            System.out.println(e.toString());
         } catch (ClassNotFoundException e) {
             System.out.println("ERREUR : ClassNotFound Exception");
         }
