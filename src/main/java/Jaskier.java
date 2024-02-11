@@ -35,7 +35,7 @@ public class Jaskier {
     public static void main(String[] args) {
 
         try {
-            Jaskier jaskier = new Jaskier();
+            new Jaskier();
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
