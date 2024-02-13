@@ -128,7 +128,6 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de courage')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Contact purifiant'));
 
-
 INSERT INTO sortclasse
 VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Amis')),
@@ -157,118 +156,110 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Détection de la magie')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Image silencieuse')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Léger comme une plume')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bouffée de poison')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contact glacial')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Illusion mineure')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumière')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumières dansantes')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Main du mage')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Message')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Poigne électrique')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Prestidigitation')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Protection contre les armes'));;
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mains brûlantes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nappe de brouillard')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Orbe chromatique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Projectile magique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Rayon empoisonné')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Repli expéditif')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Saut')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Simulacre de vie')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Sommeil')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Vague tonnante')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Agrandir/rétrécir')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Amélioration de caractéristique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bourrasque')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Briser')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Cécité/surdité')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Couronne du dément')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Déblocage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Détection des pensées')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Flou')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Force fantasmagorique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Image miroir')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Immobiliser un humanoïde')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Invisibilité')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lévitation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Modifier son apparence')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nuée de dagues')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Pas brumeux')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Pattes d''araignée')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Rayon ardent')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Suggestion')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Ténèbres')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Toile d''araignée')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Vision dans le noir')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Voir l''invisible')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Boule de feu')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Clairvoyance')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Clignotement')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contresort')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Dissipation de la magie')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Eclair')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Forme gazeuse')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Hâte')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Image majeure')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Langues')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lenteur')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumière du jour')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Marche sur l''eau')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Motif hypnotique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nuage puant')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Peur')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Protection contre l''énergie')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Respiration aquatique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Tempête de neige')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Vol')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bannissement')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Confusion')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Dominer une bête')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Flétrissement')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Invisibilité supérieure')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Métamorphose')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mur de feu')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Peau de pierre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Porte dimensionnelle')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Tempête de grêle')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Animation des objets')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Apparence trompeuse')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Cercle de téléportation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Cône de froid')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Création')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Dominer un humanoïde')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Fléau d''insectes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Immobiliser un monstre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mur de pierre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nuage mortel')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Télékinésie')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Cercle de mort')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Chaine d''éclairs')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Déplacer la terre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Désintégration')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Globe d''invulnérabilité')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mauvais oeil')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Portail magique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Rayon de soleil')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Suggestion de groupe')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Vision suprême')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Boule de feu à explosion retardée')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Changement de plan')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Doigt de mort')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Embruns prismatiques')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Forme éthérée')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Inversion de la gravité')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Téléportation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Tempête de feu')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Dominer un monstre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Eclat du soleil')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mot de pouvoir étourdissant')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nuage incendiaire')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Tremblement de terre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Arrêt du temps')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Mot de pouvoir mortel')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Nuée de météores')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Portail')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Souhait'));
 
-mains brûlantes
-nappe de brouillard
-orbe chromatique
-projectile magique
-rayon empoisonné
-repli expéditif
-saut
-simulacre de vie
-sommeil
-vague tonnante
-NIVEAU 2
-agrandir/rétrécir
-amélioration de caractéristique
-bourrasque
-bciser
-cécité/surdité
-couronne du dément
-déblocage
-détection des pensées
-flou
-force fantasmagorique image miroir
-immobiliser un humanoïde invisibilité
-lévitation
-modifier son apparence nuée de dagues
-pas brumeux
-pattes d'araignée
-rayon ardent
-suggestion
-ténèbres
-toile d'araignée
-vision dans le noir
-voir l'invisible
-NIVEAU 3
-boule de feu
-clairvoyance
-clignotement
-contresort
-dissipation de la magie
-éclair
-forme gazeuse
-hâte
-image majeure
-langues
-lenteur
-lumière du jour
-marche sur l'eau
-motif hypnotique
-nuage puant
-peur
-protection contre l'énergie
-respiration aquatique
-tempête de neige vol
-NIVEAU 4
-bannissement
-confusion
-dominer une bête
-flétrissement
-invisibilité supérieure
-métamorphose
-mur de feu
-peau de pierre
-porte dimensionnelle tempête de grêle
-NIVEAU 5
-animation des objets
-apparence trompeuse
-cercle de téléportation
-cône de froid
-création
-dominer un humanoïde
-fléau d'insectes
-immobiliser un monstre
-mur de pierre
-nuage mortel
-télékinésie
-NIVEAU 6
-cercle de mort
-chaîne d'éclairs
-déplacer la terre
-désintégration
-globe d'invulnérabilité
-mauvais œil
-portail magique rayon de soleil suggestion de groupe vision suprême
-NIVEAU 7
-boule de feu à explosion
-retardée
-changement de plan
-doigt de mort
-embruns prismatiques
-forme éthérée
-inversion de la gravité
-téléportation
-tempête de feu
-NIVEAU 8
-dominer un monstre
-éclat du soleil
-mot de pouvoir étourdissant
-nuage incendiaire
-tremblement de terre
-NIVEAU 9
-arrêt du temps
-mot de pouvoir mortel
-nuée de météores
-portail
-souhait
+INSERT INTO sortclasse
+VALUES
+    ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Souhait'));
