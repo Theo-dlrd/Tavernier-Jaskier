@@ -132,8 +132,143 @@ VALUES
 INSERT INTO sortclasse
 VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Amis')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Imposition des mains')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Châtiment divin')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de protection')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de courage')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contact purifiant'));
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Aspersion acide')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bouffée de poison')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contact glacial')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Illusion mineure')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumière')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumières dansantes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Main du mage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Message')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Poigne électrique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Prestidigitation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Protection contre les armes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Rayon de givre')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Réparation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Trait de feu')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Viser juste')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Armure du mage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bouclier')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Carreau ensorcelé')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Charme-personne')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Compréhension des langues')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Couleurs dansantes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Déguisement')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Détection de la magie')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Image silencieuse')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Léger comme une plume')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bouffée de poison')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Contact glacial')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Illusion mineure')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumière')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Lumières dansantes')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Main du mage')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Message')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Poigne électrique')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Prestidigitation')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Protection contre les armes'));;
+
+mains brûlantes
+nappe de brouillard
+orbe chromatique
+projectile magique
+rayon empoisonné
+repli expéditif
+saut
+simulacre de vie
+sommeil
+vague tonnante
+NIVEAU 2
+agrandir/rétrécir
+amélioration de caractéristique
+bourrasque
+bciser
+cécité/surdité
+couronne du dément
+déblocage
+détection des pensées
+flou
+force fantasmagorique image miroir
+immobiliser un humanoïde invisibilité
+lévitation
+modifier son apparence nuée de dagues
+pas brumeux
+pattes d'araignée
+rayon ardent
+suggestion
+ténèbres
+toile d'araignée
+vision dans le noir
+voir l'invisible
+NIVEAU 3
+boule de feu
+clairvoyance
+clignotement
+contresort
+dissipation de la magie
+éclair
+forme gazeuse
+hâte
+image majeure
+langues
+lenteur
+lumière du jour
+marche sur l'eau
+motif hypnotique
+nuage puant
+peur
+protection contre l'énergie
+respiration aquatique
+tempête de neige vol
+NIVEAU 4
+bannissement
+confusion
+dominer une bête
+flétrissement
+invisibilité supérieure
+métamorphose
+mur de feu
+peau de pierre
+porte dimensionnelle tempête de grêle
+NIVEAU 5
+animation des objets
+apparence trompeuse
+cercle de téléportation
+cône de froid
+création
+dominer un humanoïde
+fléau d'insectes
+immobiliser un monstre
+mur de pierre
+nuage mortel
+télékinésie
+NIVEAU 6
+cercle de mort
+chaîne d'éclairs
+déplacer la terre
+désintégration
+globe d'invulnérabilité
+mauvais œil
+portail magique rayon de soleil suggestion de groupe vision suprême
+NIVEAU 7
+boule de feu à explosion
+retardée
+changement de plan
+doigt de mort
+embruns prismatiques
+forme éthérée
+inversion de la gravité
+téléportation
+tempête de feu
+NIVEAU 8
+dominer un monstre
+éclat du soleil
+mot de pouvoir étourdissant
+nuage incendiaire
+tremblement de terre
+NIVEAU 9
+arrêt du temps
+mot de pouvoir mortel
+nuée de météores
+portail
+souhait

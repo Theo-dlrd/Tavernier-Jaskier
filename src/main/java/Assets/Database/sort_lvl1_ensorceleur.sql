@@ -100,7 +100,7 @@ VALUES
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/feather_fall_spell_baldursgate3_wiki_guide_150px_2.png'
 ),
 (
-    'Mains brulantes',
+    'Mains brûlantes',
     1,
     (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
     '1 action',
