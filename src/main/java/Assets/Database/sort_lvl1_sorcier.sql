@@ -45,7 +45,7 @@ VALUES
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/faerie_fire_spell_baldursgate3_wiki_guide_150px_2.png'
 ),
 (
-    'Tentacules d''Hardar',
+    'Tentacules d''Hadar',
     1,
     (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
     '1 action',
