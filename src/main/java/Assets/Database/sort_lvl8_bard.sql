@@ -10,6 +10,6 @@ VALUES
     '24 heures',
     'Vous touchez une créature consentante et, jusqu''à la fin du sort, vous l''immunisez contre les dégâts psychiques, les effets percevant les émotions ou révélant les pensées, les sorts de divination et l''état charmé. Ce sort déjoue même les souhaits et les sorts et effets de même puissance qui cherchent à affecter l''esprit de la cible ou à obtenir des informations sur elle.',
     NULL
-),
+);
 
 

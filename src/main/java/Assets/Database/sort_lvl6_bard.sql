@@ -1,7 +1,7 @@
 INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
 (
-    'Danse irrésistile d''Otto',
+    'Danse irrésistible d''Otto',
     6,
     (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
     '1 action',
