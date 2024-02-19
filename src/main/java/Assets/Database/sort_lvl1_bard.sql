@@ -6,7 +6,7 @@ VALUES
     (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
     '1 action',
     '9 mètres',
-    'V, S, M un peu de nourriture ',
+    'V, S, M (un peu de nourriture)',
     '24 heures',
     'Grâce à ce sort, vous convainquez une bête que vous ne lui voulez pas de mal. Choisissez une bête située à portée dans votre champ de vision. Elle doit vous voir et vous entendre. Le sort échoue si elle possède une Intelligence de 4 ou plus. Dans le cas contraire, elle doit réussir unjet de Sagesse, sans quoi vous la charmez pendant toute la durée du sort. Le sort se termine si vous ou l''un de vos camarades blessez la cible.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 2 ou plus, vous pouvez affecter une bête supplémentaire par emplacement de sort au-delà du 1er.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/animal_friendship_spell_baldursgate3_wiki_guide_150px_2.png'
