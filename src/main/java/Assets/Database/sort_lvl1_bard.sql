@@ -45,7 +45,7 @@ VALUES
     NULL
 ),
 (
-    'Lueurs féériques',
+    'Lueurs féeriques',
     1,
     (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
     '1 action',
