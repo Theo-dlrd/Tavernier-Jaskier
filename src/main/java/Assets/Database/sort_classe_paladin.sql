@@ -65,8 +65,11 @@ VALUES
     'instantanée',
     'À partir du niveau 14, vous pouvez utiliser votre action pour mettre fin à un sort qui vous affecte ou qui affecte une créature consentante que vous touchez.' || E'\n' || 'Vous pouvez utiliser cette aptitude un nombre de fois égal à votre modificateur de Charisme (avec un minimum d''une fois). Vous récupérez les utilisations dépensées dès que vous terminez un long repos.',
     'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/holy_rebuke_action_paladin_bg3_wiki_150px.png'
-),
-(
+);
+
+
+/*
+ (
     'Sanctuaire',
     -1,
     (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
@@ -75,9 +78,9 @@ VALUES
     'V, S, M (un petit miroir en argent)',
     '1 minute',
     'Vous protégez une créature à portée contre les attaques. Jusqu''à la fin du sort, toute créature qui vise la cible avec une attaque ou un sort néfaste doit d''abord faire un jet de sauvegarde. Si elle le rate, elle doit choisir une nouvelle cible, sans quoi l''attaque ou le sort est perdu. Ce sort ne protège pas la cible contre les effets de zone, comme l''explosion d''une boule de feu. Ce sort se termine si la créature protégée attaque ou lance un sort affectant une créature ennemie.',
-    'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/sanctuary_spell_abjuration_bg3_wiki_150px.png',
+    'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/sanctuary_spell_abjuration_bg3_wiki_150px.png'
 ),
-(
+ (
     'Lueur d''espoir',
     -1,
     (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
@@ -242,3 +245,4 @@ VALUES
     'Vous voyez et entendez une créature donnée de votre choix, à condition qu''elle se trouve sur le même plan d''existence que vous. La cible doit faire un jet de sauvegarde de Sagesse, modifié par le degré de connaissance que vous avez d''elle et le type de lien physique que vous avez établi avec elle. Si la cible sait que vous lancez ce sort, elle peut rater volontairement son jet de sauvegarde si elle veut que vous l''observiez.' || E'\n' || '** Connaissance / Modificateur du jet de sauvegarde **' || E'\n' || 'Deuxième main (vous avez entendu parler de la cible) / +5' || E'\n' || 'Première main (vous avez rencontré la cible) / +0' || E'\n' || 'Familière (vous connaissez bien la cible) / -5' || E'\n' || '** Lien / Modificateur du jet de sauvegarde **' || E'\n' || 'Représentation ou portrait / -2' || E'\n' || 'Possession ou habit / -4' || E'\n' || 'Partie du corps, cheveux, ongles, etc. / -10' || E'\n' || 'Si la cible réussit son jet de sauvegarde, elle n''est pas affectée et vous ne pouvez plus utiliser ce sort sur elle pendant 24 heures.' || E'\n' || 'Si elle rate son jet, le sort crée un organe sensoriel invisible dans un rayon de 3 mètres autour d''elle. Vous voyez et entendez à travers cet organe comme si vous vous trouviez à sa place. L''organe sensoriel se déplace avec la cible et reste dans un rayon de 3 mètres autour d''elle pendant toute la durée du sort. Une créature capable de voir les objets invisibles perçoit l''organe sensoriel comme un orbe lumineux de la taille de votre poing.' || E'\n' || 'Au lieu de prendre une créature pour cible, vous pouvez choisir un lieu que vous avez déjà vu. L''organe sensoriel apparaît alors à cet endroit et n''en bouge pas.',
     NULL
 );
+ */

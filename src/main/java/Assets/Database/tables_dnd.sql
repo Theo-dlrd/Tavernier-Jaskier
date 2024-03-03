@@ -19,6 +19,19 @@ CREATE TABLE sort(
     img_sort text
 );
 
+CREATE TABLE sortDeClasse (
+    id_sort INT REFERENCES sort(id_sort),
+    id_classe INT REFERENCES classe(id_classe),
+    niveau_classe INT,
+    info_supp text,
+    PRIMARY KEY (id_sort, id_classe)
+);
+
+CREATE TABLE sortRituel(
+    id_sort INT REFERENCES sort(id_sort) PRIMARY KEY
+);
+
+
 CREATE OR REPLACE FUNCTION verif_nom_sort_existence()
     RETURNS TRIGGER AS $$
     BEGIN
@@ -69,7 +82,7 @@ CREATE TABLE race(
 INSERT INTO race(nom_race)
 VALUES ('Elfe'),('Halfelin'),('Humain'),('Nain'),('Demi-elfe'),('Demi-orc'),('Gnome'),('Sangdragon'),('Tieffelin');
 
-CREATE TABLE sortClasse(
+CREATE TABLE sortParClasse(
     id_classe int REFERENCES classe(id_classe),
     id_sort int REFERENCES sort(id_sort)
 );
