@@ -29,9 +29,7 @@ public class CommandManager extends ListenerAdapter {
         authorizedUsers.add("natyk");
     }
 
-
     private Connection connexion;
-
     private final String url;
     private final String utilisateur;
     private final String password;
@@ -64,9 +62,8 @@ public class CommandManager extends ListenerAdapter {
                 try {
                     OptionMapping messageOption = event.getOption("nom");
                     String nomSort = Objects.requireNonNull(messageOption).getAsString();
-                    if (nomSort.contains("'")) {
-                        nomSort = nomSort.replace("'", "''");
-                    }
+                    nomSort = SpellNameCorrection(nomSort);
+
                     String queryExact = "SELECT * FROM sort WHERE nom_sort='" + nomSort + "' LIMIT 1;";
                     String queryAround = "SELECT * FROM sort WHERE nom_sort like '%" + nomSort + "%' LIMIT 1;";
 
@@ -96,7 +93,7 @@ public class CommandManager extends ListenerAdapter {
                             i++;
                         }
                         if (i == 0) {
-                            event.reply("Aucun sort similaire n'a été trouvé !\nFormat : _Nom du sort_ (1e lettre en majuscule) !").queue();
+                            event.reply("Aucun sort similaire n'a été trouvé !\nFormat : _Nom du sort_ !").queue();
                         }
 
                         resultSetAround.close();
@@ -261,6 +258,15 @@ public class CommandManager extends ListenerAdapter {
         event.getGuild().updateCommands().addCommands(commandData).queue();
     }
 
+    private String SpellNameCorrection(String nom){
+        if (nom.contains("'")) {
+            nom = nom.replace("'", "''");
+        }
+        StringBuilder modifName = new StringBuilder(nom);
+        if(modifName.charAt(0) == 'É' || modifName.charAt(0) == 'é'){
+            modifName.setCharAt(0,'e');
+        }
 
-
+        return modifName.substring(0,1).toUpperCase()+modifName.substring(1).toLowerCase();
+    }
 }

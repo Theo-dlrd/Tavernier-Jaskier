@@ -39,8 +39,10 @@ public class Jaskier {
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
+            System.out.println("Vérifiez le token du bot.");
         } catch (SQLException e) {
             System.out.println("ERREUR : SQL Exception");
+            System.out.println("Vérifiez que le serveur soit allumé et que les identifiants et mot de passe de la bdd soient les bons.");
         } catch (ClassNotFoundException e) {
             System.out.println("ERREUR : ClassNotFound Exception");
         }
