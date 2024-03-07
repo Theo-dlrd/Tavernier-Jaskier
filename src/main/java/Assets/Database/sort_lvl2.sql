@@ -243,7 +243,7 @@ VALUES
         'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/gustofwind-spell-bg3-wiki-guide-64px.png'
     ),
     (
-        'Briser',
+        'Fracassement',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',

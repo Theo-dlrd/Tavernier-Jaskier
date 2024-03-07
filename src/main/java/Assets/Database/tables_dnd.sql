@@ -9,6 +9,8 @@ VALUES ('Abjuration'),('Divination'),('Enchantement'),('Evocation'),('Illusion')
 CREATE TABLE sort(
     id_sort serial PRIMARY KEY,
     nom_sort varchar(100),
+    alias varchar(100),
+    nom_sort_en varchar(100),
     niveau_sort int,
     ecole_sort int,
     duree_incantation varchar(200),
@@ -134,12 +136,6 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Frappe du bannissement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Relever les morts')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Vague destructrice')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Sens divin')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Imposition des mains')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Châtiment divin')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de protection')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Aura de courage')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Paladin'),(SELECT id_sort FROM sort WHERE nom_sort='Contact purifiant'));
 
 INSERT INTO sortclasse
 VALUES
@@ -182,7 +178,7 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Agrandir/rétrécir')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Amélioration de caractéristique')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Bourrasque')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Briser')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Fracassement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Cécité/surdité')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Couronne du dément')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Ensorceleur'),(SELECT id_sort FROM sort WHERE nom_sort='Déblocage')),
@@ -295,7 +291,7 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Serviteur invisible')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Tentacules d''Hadar')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Texte illusoire')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Briser')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Fracassement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Couronne du dément')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Envoûtement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Sorcier'),(SELECT id_sort FROM sort WHERE nom_sort='Image miroir')),
@@ -390,7 +386,7 @@ VALUES
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Amélioration de caractéristique')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Apaisement des émotions')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Bouche magique')),
-    ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Briser')),
+    ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Fracassement')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Cécité/surdité')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Chauffer le métal')),
     ((SELECT id_classe FROM classe WHERE nom_classe='Barde'),(SELECT id_sort FROM sort WHERE nom_sort='Couronne du dément')),

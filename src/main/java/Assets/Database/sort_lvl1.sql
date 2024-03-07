@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Amitié avec les animaux',
+        NULL,
+        'Animal friendship',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Fou rire de Tasha',
+        NULL,
+        'Tasha''s hideous laughter',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Grande foulée',
+        NULL,
+        'Longstrider',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Identification',
+        NULL,
+        'Identify',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 minute',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Lueurs féeriques',
+        NULL,
+        'Faerie fire',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Mot de guérison',
+        NULL,
+        'Healing word',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action bonus',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Murmures dissonants',
+        NULL,
+        'Dissonant whispers',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Balisage',
+        'Eclair traçant',
+        'Guiding bolt',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Blessure',
+        NULL,
+        'Inflict wounds',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Création ou destruction d''eau',
+        NULL,
+        'Create food and water',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Sanctuaire',
+        NULL,
+        'Sanctuary',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action bonus',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Baies nourricières',
+        NULL,
+        'Goodberry',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Enchevêtrement',
+        NULL,
+        'Entangle',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Armure du mage',
+        'Armure de mage',
+        'Mage Armor',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Bouclier',
+        NULL,
+        'Shield',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 réaction à effectuer lorsque vous êtes touché par une attaque ou un sort de projectile magique',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Carreau ensorcelé',
+        'Trait ensorcelé',
+        'Witch bolt',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Charme-personne',
+        NULL,
+        'Charm Person',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Compréhension des langues',
+        NULL,
+        'Comprehend Languages',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Couleurs dansantes',
+        NULL,
+        'Color Spray',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Déguisement',
+        NULL,
+        'Disguise Self',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -222,6 +262,8 @@ VALUES
     ),
     (
         'Image silencieuse',
+        NULL,
+        'Silent Image',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Léger comme une plume',
+        'Feuille morte',
+        'Feather fall',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 réaction, que vous effectuez quand vous-même ou une créature située dans un rayon de 18 mètres tombe soudain',
@@ -244,6 +288,8 @@ VALUES
     ),
     (
         'Mains brûlantes',
+        NULL,
+        'Burning hands',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Nappe de brouillard',
+        NULL,
+        'Fog cloud',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Orbe chromatique',
+        NULL,
+        'Chromatic orb',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Projectile magique',
+        NULL,
+        'Magic missile',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Rayon empoisonné',
+        NULL,
+        'Ray of sickness',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -299,6 +353,8 @@ VALUES
     ),
     (
         'Repli expéditif',
+        NULL,
+        'Expeditious retreat',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action bonus',
@@ -310,6 +366,8 @@ VALUES
     ),
     (
         'Saut',
+        NULL,
+        'Jump',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -321,6 +379,8 @@ VALUES
     ),
     (
         'Simulacre de vie',
+        NULL,
+        'False life',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -332,6 +392,8 @@ VALUES
     ),
     (
         'Sommeil',
+        NULL,
+        'Sleep',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -343,6 +405,8 @@ VALUES
     ),
     (
         'Vague tonnante',
+        NULL,
+        'Thunderwave',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -354,6 +418,8 @@ VALUES
     ),
     (
         'Appel de familier',
+        NULL,
+        'Find familiar',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 heure',
@@ -365,6 +431,8 @@ VALUES
     ),
     (
         'Disque flottant de Tenser',
+        NULL,
+        'Tenser''s floating disk',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -376,6 +444,8 @@ VALUES
     ),
     (
         'Graisse',
+        NULL,
+        'Grease',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -387,6 +457,8 @@ VALUES
     ),
     (
         'Bénédiction',
+        NULL,
+        'Bless',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -398,6 +470,8 @@ VALUES
     ),
     (
         'Bouclier de la foi',
+        NULL,
+        'Shield of faith',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action bonus',
@@ -409,6 +483,8 @@ VALUES
     ),
     (
         'Détection de la magie',
+        NULL,
+        'Detect magic',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action (rituel)',
@@ -420,6 +496,8 @@ VALUES
     ),
     (
         'Détection du bien et du mal',
+        'Détection du mal et du bien',
+        'Detect evil and good',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -431,6 +509,8 @@ VALUES
     ),
     (
         'Détection du poison et des maladies',
+        NULL,
+        'Detect poison and disease',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action (rituel)',
@@ -442,6 +522,8 @@ VALUES
     ),
     (
         'Duel forcé',
+        NULL,
+        'Compelled duel',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action bonus',
@@ -453,6 +535,8 @@ VALUES
     ),
     (
         'Faveur divine',
+        NULL,
+        'Divine favor',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -464,6 +548,8 @@ VALUES
     ),
     (
         'Frappe ardente',
+        'Châtiment calcinant',
+        'Searing smite',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -475,6 +561,8 @@ VALUES
     ),
     (
         'Frappe colérique',
+        'Châtiment courroucé',
+        'Wrathful smite',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -486,6 +574,8 @@ VALUES
     ),
     (
         'Frappe tonitruante',
+        'Châtiment tonitruant',
+        'Thunderous smite',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -497,6 +587,8 @@ VALUES
     ),
     (
         'Héroïsme',
+        NULL,
+        'Heroism',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -508,6 +600,8 @@ VALUES
     ),
     (
         'Injonction',
+        NULL,
+        'Command',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -519,6 +613,8 @@ VALUES
     ),
     (
         'Protection contre le mal et le bien',
+        NULL,
+        'Protection from evil and good',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -530,6 +626,8 @@ VALUES
     ),
     (
         'Purification de la nourriture et de l''eau',
+        'Purification de nourriture et d''eau',
+        'Purify food and drink',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -541,6 +639,8 @@ VALUES
     ),
     (
         'Soin des blessures',
+        'Soins',
+        'Cure wounds',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -552,6 +652,8 @@ VALUES
     ),
     (
         'Alarme',
+        NULL,
+        'Alarm',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 minute',
@@ -563,6 +665,8 @@ VALUES
     ),
     (
         'Grêle d''épines',
+        NULL,
+        'Hail of thorns',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action bonus',
@@ -574,6 +678,8 @@ VALUES
     ),
     (
         'Armure d''Agathys',
+        NULL,
+        'Armor of Agathys',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -585,6 +691,8 @@ VALUES
     ),
     (
         'Maléfice',
+        NULL,
+        'Hex',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action bonus',
@@ -596,6 +704,8 @@ VALUES
     ),
     (
         'Représailles infernales',
+        NULL,
+        'Hellish rebuke',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 réaction en réponse aux dégâts que vous inflige une créature située dans votre champ de vision et dans un rayon de 18 mètres autour de vous',
@@ -607,6 +717,8 @@ VALUES
     ),
     (
         'Serviteur invisible',
+        NULL,
+        'Unseen servant',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -618,6 +730,8 @@ VALUES
     ),
     (
         'Tentacules d''Hadar',
+        'Tentacules de Hadar',
+        'Arms of Hadar',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -629,6 +743,8 @@ VALUES
     ),
     (
         'Texte illusoire',
+        NULL,
+        'Illusory script',
         1,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 minute',

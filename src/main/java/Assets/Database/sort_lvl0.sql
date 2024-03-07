@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Moquerie cruelle',
+        NULL,
+        'Vicious mockery',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Assistance',
+        NULL,
+        'Guidance',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Epargner les mourants',
+        'Stabilisation',
+        'Spare the dying',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Flamme sacrée',
+        NULL,
+        'Sacred flame',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Résistance',
+        NULL,
+        'Resistance',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Thaumaturgie',
+        NULL,
+        'Thaumaturgy',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Druidisme',
+        NULL,
+        'Druidcraft',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Fouet épineux',
+        NULL,
+        'Thorn whip',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Gourdin magique',
+        'Crosse des druides',
+        'Shillelagh',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action bonus',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Produire une flamme',
+        'Flammes',
+        'Produce flame',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Amis',
+        'Faux amis',
+        'Friends',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Aspersion acide',
+        'Aspersion d''acide',
+        'Acid splash',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Bouffée de poison',
+        NULL,
+        'Poison spray',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Contact glacial',
+        NULL,
+        'Chill touch',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Illusion mineure',
+        NULL,
+        'Minor illusion',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Lumière',
+        NULL,
+        'Light',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Lumières dansantes',
+        NULL,
+        'Dancing lights',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Main du mage',
+        'Main de mage',
+        'Mage hand',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -199,6 +235,8 @@ VALUES
         'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/mage_hand_spell_baldursgate3_wiki_guide_150px_2.png'
     ),
     (
+        'Message',
+        NULL,
         'Message',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Poigne électrique',
+        NULL,
+        'Shocking grasp',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -221,6 +261,8 @@ VALUES
         'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/shocking_grasp_spell_baldursgate3_wiki_guide_150px_2.png'
     ),
     (
+        'Prestidigitation',
+        NULL,
         'Prestidigitation',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Protection contre les armes',
+        NULL,
+        'Blade ward',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -244,6 +288,8 @@ VALUES
     ),
     (
         'Rayon de givre',
+        NULL,
+        'Ray of Frost',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Réparation',
+        NULL,
+        'Mending',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 minute',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Trait de feu',
+        NULL,
+        'Fire bolt',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Viser juste',
+        'Coup au but',
+        'True Strike',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Explosion occulte',
+        'Décharge occulte',
+        'Eldritch blast',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
