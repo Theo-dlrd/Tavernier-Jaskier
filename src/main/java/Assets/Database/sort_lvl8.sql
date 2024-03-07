@@ -1,0 +1,200 @@
+INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+VALUES
+    (
+        'Esprit impénétrable',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
+        '1 action',
+        'contact',
+        'V, S',
+        '24 heures',
+        'Vous touchez une créature consentante et, jusqu''à la fin du sort, vous l''immunisez contre les dégâts psychiques, les effets percevant les émotions ou révélant les pensées, les sorts de divination et l''état charmé. Ce sort déjoue même les souhaits et les sorts et effets de même puissance qui cherchent à affecter l''esprit de la cible ou à obtenir des informations sur elle.',
+        NULL
+    ),
+    (
+        'Aura sacrée',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
+        '1 action',
+        'personnelle',
+        'V, S, M (un petit reliquaire d''une valeur minimum de 1 000 po contenant une relique sacrée, comme un bout de la robe d''un saint ou un morceau de parchemin prélevé sur un texte sacré)',
+        'concentration,jusqu''à 1 minute',
+        'Une lumière divine émane de votre personne et forme un doux halo qui vous enveloppe dans un rayon de 9 mètres. Les créatures de votre choix se trouvant dans ce rayon au moment où vous lancez ce sort émettent une faible lumière dans un rayon de 1,50 mètre. De plus, jusqu''à la fin du sort, elles sont avantagées lors des jets de sauvegarde tandis que les autres créatures sont désavantagées quand elles effectuent un jet d''attaque contre elles. Quand un fiélon ou un mort-vivant touche une créature affectée avec une attaque au corps à corps, l''aura qui enveloppe la créature flamboie soudain. L''assaillant doit réussir un jet de sauvegarde de Constitution ou se retrouver aveugle jusqu''à la fin du sort.',
+        NULL
+    ),
+    (
+        'Champ antimagie',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
+        '1 action',
+        'personnelle (sphère de 3 mètres de rayon)',
+        'V, S,M (une pincée de poudre de fer ou de limaille)',
+        'concentration, jusqu''à 1 heure',
+        'Une sphère d''antimagie invisible de 3 mètres de rayon vous entoure. La zone qu''elle englobe est coupée de l''énergie magique qui imprègne le multivers. En son sein, il est impossible de lancer un sort, les créatures invoquées disparaissent et même les objets magiques deviennent ordinaires. La sphère reste centrée sur vous et se déplace avec vous jusqu''à la fin du sort.' || E'\n' || 'Les sorts et autres effets magiques, en dehors de ceux émanant d''un artefact ou d''une divinité, sont supprimés au sein de la sphère et ne peuvent pénétrer dans son espace. Un emplacement dépensé pour lancer un sort ainsi supprimé est tout de même consommé. L''effet ne fonctionne pas tant qu''il est supprimé, mais le temps passé sous suppression est tout de même décompté de sa durée d''efficacité.' || E'\n' || '**Effets visant une cible** Les sorts et autres effets magiques visant une créature ou un objet situé dans la sphère, comme _projectile magique_ ou _charme-personne_, n''ont aucun effet sur cette cible.' || E'\n' || '**Zones de magie**: L''aire d''un sort ou d''un effet magique, comme celle d''une _boule de feu_, ne peut pas s''étendre au sein de la sphère. Si la sphère recouvre une zone de magie existante, l''effet de cette dernière est supprimé dans la partie recouverte par la sphère. Par exemple, les flammes d''un _mur de feu_ sont supprimées au sein de la sphère, créant un trou dans le mur si la partie recouverte est assez grande.' || E'\n' || '**Sort**: Tout sort ou effet magique actif sur une créature ou un objet est supprimé dès qu''elle ou il se trouve à l''intérieur et pendant tout le temps qu''elle ou il y reste.' || E'\n' || '**Objets magiques**: Les propriétés et les pouvoirs d''un objet magique sont supprimés une fois au sein de la sphère. Par exemple, une épée longue +1 située dans la sphère fonctionne comme une épée longue ordinaire.' || E'\n' || 'Les propriétés et les pouvoirs d''une arme magique sont supprimés si son utilisateur la manie contre une cible située dans la sphère ou s''il se trouve dans la sphère. Si une arme ou une munition magique quitte entièrement la sphère (par exemple si vous tirez une flèche magique ou projetez une lance magique en dehors de la sphère), la suppression de magie cesse d''affecter l''objet dès qu''il quitte la sphère.' || E'\n' || '**Déplacement magique**: La téléportation et les voyages planaires échouent systématiquement au sein de la sphère, que cette dernière serve de destination ou de point de départ à ce type de déplacement. Un portail menant en un autre lieu, sur un autre monde ou sur un autre plan d''existence se ferme temporairement tant qu''il est englobé dans la sphère, de même que l''ouverture sur un espace extradimensionnel telle celle créée par le sort _corde enchantée_.' || E'\n' || '**Créatures et objets**: Une créature ou un objet invoqués ou créés par magie disparaissent temporairement si la sphère les recouvre. Ils réapparaissent instantanément dès que l''espace qu''ils occupent ne se trouve plus au sein de la sphère.' || E'\n' || '**Dissipation de la magie**: Les sorts et les effets magiques comme _dissipation de la magie_ n''ont aucun effet sur la sphère. De même, les sphères issues de divers sorts de champ antimagie ne s''annulent pas les unes les autres.',
+        NULL
+    ),
+    (
+        'Contrôle du climat',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
+        '10 minutes',
+        'personnelle (rayon de 7,5 kilomètres)',
+        'V, S, M (encens incandescent et un peu de bois et de terre mélangés dans de l''eau)',
+        'concentration, jusqu''à 8 heure',
+        'Vous prenez le contrôle de la météo dans un rayon de 7,5 kilomètres autour de vous pendant toute la durée du sort. Vous devez être en extérieur au moment de l''incantation. Si vous vous rendez dans un endroit d''où vous ne voyez pas directement le ciel, le sort se termine prématurément.' || E'\n' || 'Au moment de l''incantation, vous changez les conditions météorologiques actuelles déterminées par le MD en fonction du climat et de la saison. Vous pouvez modifier les précipitations, la température et le vent. Il faut ld4 x 10 minutes pour que les nouvelles conditions s''installent. Vous pouvez ensuite les modifier à nouveau. Le temps retourne progressivement à la normale une fois le sort terminé.' || E'\n' || 'Quand vous modifiez les conditions météorologiques, cherchez les conditions actuelles dans les tables suivantes vous pouvez les décaler d''un cran vers le haut ou le bas. Quand vous modifiez le vent, vous pouvez changer sa direction.' || E'\n' || '**PRÉCIPITATIONS**' || E'\n' || '**Etape - Condition**' || E'\n' || '1 - Ciel dégagé' || E'\n' || '2 - Quelques nuages' || E'\n' || '3 - Ciel couvert ou brume au sol' || E'\n' || '4 - Pluie, grêle ou neige' || E'\n' || '5 - Pluies torrentielles, forte grêle ou blizzard' || E'\n' || '**TEMPÉRATURE**' || E'\n' || '**Etape - Condition**' || E'\n' || '1 - Chaleur insoutenable' || E'\n' || '2 - Forte chaleur' || E'\n' || '3 - Tiède' || E'\n' || '4 - Frais' || E'\n' || '5 - Grand froid' || E'\n' || '6 - Froid polaire' || E'\n' || '**VENT**' || E'\n' || '**Etape - Condition**' || E'\n' || '1 - Temps calme' || E'\n' || '2 - Vent modéré' || E'\n' || '3 - Vent fort' || E'\n' || '4 - Grand vent' || E'\n' || '5 - Tempête',
+        NULL
+    ),
+    (
+        'Formes animales',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
+        '1 action',
+        '9 mètres',
+        'V, S',
+        'concentration, jusqu''à 24 heures',
+        'Votre magie change autrui en animal. Choisissez autant de créatures consentantes, à portée et dans votre champ de vision que vous désirez. Vous transformez chacune d''entre elles en bête de taille Grande ou inférieure dotée d''un indice de dangerosité de 4 ou moins. Lors de vos tours suivants, vous pouvez dépenser votre action pour transformer les créatures affectées en d''autres animaux.' || E'\n' || 'La transformation persiste pour chaque cible pendant toute la durée du sort ou jusqu''à ce que la cible tombe à 0 point de vie ou meure. Vous pouvez attribuer une forme différente à chaque cible. Les statistiques de jeu de la cible sont remplacées par celles de l''animal choisi, bien qu''elle conserve son alignement, son Intelligence, sa Sagesse et son Charisme. La cible adopte les points de vie de sa nouvelle forme et, quand elle reprend son apparence normale, elle se retrouve avec le même nombre de points de vie que celui qu''elle avait avant sa transformation. Si elle recouvre sa forme normale suite à un passage à 0 point de vie, les dégâts en excès sont reportés sur les points de vie de sa forme normale. Tant que ces dégâts en excès ne réduisent pas les points de vie de la forme normale de la cible à 0, elle ne tombe pas inconsciente. Les actions de la créature transformée sont limitées par la nature de sa nouvelle apparence et elle ne peut ni parler ni lancer de sorts.' || E'\n' || 'L''équipement de la cible fusionne avec sa nouvelle forme, mais elle ne peut pas activer ni manier la moindre pièce d''équipement et ne bénéficie pas des avantages qui en découlent habituellement.',
+        NULL
+    ),
+    (
+        'Répulsion/attirance',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
+        '1 heure',
+        '18 mètres',
+        'V, S, M (un cristal d''alun trempé dans le vinaigre pour répulsion ou une goutte de miel pour attirance)',
+        '10 jours',
+        'Ce sort attire ou repousse les créatures de votre choix. Vous choisissez un objet ou une créature de taille Très Grande ou inférieure situés à portée ou une zone pas plus grande qu''un cube de 60 mètres de côté. Ensuite, vous décrivez une catégorie de créatures intelligentes, comme les dragons rouges, les gobelins ou les vampires. La cible est alors baignée d''une aura qui attire ou repousse ces créatures pendant toute la durée du sort. Vous devez choisir la répulsion ou l''attirance comme effet de l''aura.' || E'\n' || '**Répulsion**: L''enchantement génère chez les créatures de la catégorie choisie un intense besoin de quitter les lieux et d''éviter la cible. Quand une telle créature voit la cible ou se trouve dans un rayon de 18 mètres autour d''elle, elle doit réussir un jet de sauvegarde de Sagesse ou se retrouver terrorisée. Elle reste dans cet état tant qu''elle voit la cible ou se trouve à 18 mètres ou moins d''elle. Tant que la cible l''effraie, la créature doit impérativement utiliser son déplacement pour gagner l''endroit sûr le plus proche, c''est-à-dire un endroit d''où elle ne verra plus la cible. Si la créature s''éloigne à plus de 18 mètres de la cible et ne la voit plus, elle n''est plus terrorisée, mais elle le redevient si la cible apparaît de nouveau en vue ou si elle s''approche à 18 mètres ou moins d''elle.' || E'\n' || '**Attirance**: L''enchantement génère chez la créature une envie irrépressible de s''approcher de la cible dès qu''elle se trouve à 18 mètres ou moins d''elle ou dès qu''elle la voit. Quand la créature voit la cible ou se trouve dans un rayon de 18 mètres autour d''elle, elle doit réussir un jet de sauvegarde de Sagesse, sans quoi, à chacun de ses tours, elle se déplace de manière à entrer dans la zone désirée ou à arriver à portée de la cible. Une fois là, la créature ne peut plus s''éloigner de sa propre initiative.' || E'\n' || 'Si la cible blesse ou fait du mal à la créature affectée, cette dernière a droit à un nouveau jet de sauvegarde de Sagesse pour mettre un terme à l''effet, comme décrit plus bas.' || E'\n' || '**Mettre un terme à l''effet**: Si une créature affectée termine son tour alors qu''elle ne se trouve pas à 18 mètres ou moins de la cible ou qu''elle ne peut pas la voir, elle a droit à unjet de sauvegarde de Sagesse. Si elle le réussit, la cible n''exerce plus d''effet sur elle et elle comprend que le sentiment d''attirance ou de répulsion qu''elle ressentait était d''origine magique. De plus, une créature affectée par le sort a droit à un jet de sauvegarde de Sagesse toutes les 24 heures tant que le sort persiste. Une créature qui réussit son jet de sauvegarde contre l''effet est immunisée contre lui pendant 1 minute, après quoi, il peut de nouveau l''affecter.',
+        NULL
+    ),
+    (
+        'Tsunami',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
+        '1 minute',
+        'champ de vision',
+        'V, S',
+        'concentration, jusqu''à 6 rounds',
+        'Un mur d''eau apparaît soudain en un point de votre choix situé à portée. Il peut faire jusqu''à 90 mètres de long, autant de haut et 15 mètres d''épaisseur. Il persiste pendant toute la durée du sort.' || E'\n' || 'Quand le mur apparaît, toutes les créatures situées dans la zone qu''il occupe doivent faire un jet de sauvegarde de Force. Celles qui échouent reçoivent 6d10 dégâts contondants, les autres la moitié seulement.' || E'\n' || 'Une fois le mur apparu, il s''éloigne de vous sur une distance de 15 mètres (emportant toutes les créatures qui se trouvent en son sein) au début de chacun de vos tours. Chaque créature de taille Grande ou inférieure qui se trouve dans le mur ou dans un espace où le mur pénètre lors de son déplacement doit réussir un jet de sauvegarde de Force ou subir 5d10 dégâts contondants. Une créature subit ces dégâts une fois seulement par round. À la fin du tour, la hauteur du mur se réduit de 15 mètres et les dégâts qu''il inflige aux tours suivants se réduisent de 1d10. Le sort se termine quand le mur ne fait plus que 0 mètre de haut.' || E'\n' || 'Une créature prisonnière du mur peut se déplacer en nageant, mais la vague est si puissante qu''elle doit pour cela réussir un test de Force (Athlétisme) contre le DD de votre sort. Si elle rate ce test, elle est incapable de se déplacer. Une créature qui se déplace hors du mur tombe à terre.',
+        NULL
+    ),
+    (
+        'Dominer un monstre',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '18 mètres',
+        'V, S',
+        'concentration, jusqu''à 1 heure',
+        'Vous tentez d''envoûter une créature située à portée dans votre champ de vision. Elle doit réussir un jet de sauvegarde de Sagesse, sans quoi vous la charmez pendant toute la durée du sort. Elle est avantagée lors du jet de sauvegarde si vous ou des créatures amicales envers vous êtes en train de la combattre.' || E'\n' || 'Tant que la créature est charmée, vous entretenez un lien télépathique avec elle qui persiste tant que vous vous trouvez sur le même plan d''existence. Vous pouvez utiliser ce lien télépathique pour donner des ordres à cette créature tant que vous êtes conscient (ce qui ne vous demande pas d''action). Elle fait de son mieux pour vous obéir. Vous pouvez lui donner un ordre simple et générique, comme « attaque cette créature », « cours jusque là-bas » ou « va chercher cet objet ». Si elle ne reçoit pas de nouvelles instructions de votre part une fois l''ordre exécuté, elle se contente de se défendre et de se préserver au mieux.' || E'\n' || 'Vous pouvez utiliser votre action pour prendre le contrôle total de votre cible et la diriger de façon précise. Jusqu''à la fin de votre prochain tour, elle exécute seulement les actions que vous choisissez et ne fait rien que vous ne lui ayez autorisé. Pendant cette période, vous pouvez aussi lui faire exécuter une réaction, mais pour cela, vous devez également dépenser votre propre réaction.' || E'\n' || 'Chaque fois que la cible subit des dégâts, elle a droit à un nouveau jet de sauvegarde de Sagesse contre le sort. Si elle le réussit, le sort prend fin.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 9, la durée devient « concentration, jusqu''à 8 heures ».',
+        NULL
+    ),
+    (
+        'Eclat du soleil',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '45 mètres',
+        'V, S, M (du feu et un éclat d''héliotrope)',
+        'instantanée',
+        'La chaude lumière du soleil illumine une zone de 18 mètres de rayon centrée sur un point de votre choix situé à portée. Chaque créature présente dans cette lumière doit faire un jet de sauvegarde de Constitution. Celles qui échouent subissent 12d6 dégâts radiants et sont aveuglées pendant 1 minute. Les autres subissent seulement la moitié des dégâts et ne sont pas aveuglées par le sort. Les vases et les morts-vivants sont désavantagés lors de ce jet de sauvegarde.' || E'\n' || 'Une créature aveuglée par le sort fait un autre jet de Constitution à la fin de chacun de ses tours. Dès qu''elle réussit, sa cécité disparaît.' || E'\n' || 'Ce sort dissipe toutes les ténèbres présentes dans la zone qui sont issues d''un sort.',
+        NULL
+    ),
+    (
+        'Mot de pouvoir étourdissant',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
+        '1 action',
+        '18 mètres',
+        'V',
+        'instantanée',
+        'Vous prononcez un mot de pouvoir capable de submerger l''esprit d''une créature située à portée dans votre champ de vision. Elle en est abasourdie. Si elle possède 150 points de vie ou moins, elle est étourdie, sinon le sort est sans effet. Une cible étourdie a droit à un jet de sauvegarde de Constitution à la fin de chacun de ses tours. L''effet d''étourdissement se termine dès qu''elle en réussit un.',
+        NULL
+    ),
+    (
+        'Nuage incendiaire',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
+        '1 action',
+        '45 mètres',
+        'V, S',
+        'concentration, jusqu''à 1 minute',
+        'Un nuage de fumée ondoyant constellé de braises rougeoyantes apparaît sous la forme d''une sphère de 6 mètres de rayon centrée sur un point à portée. Le nuage se répand en contournant les angles si nécessaire et, à l''intérieur, la visibilité est fortement obstruée. Le nuage persiste pendant toute la durée du sort ou jusqu''à ce qu''un vent fort ou modéré (au moins 15 km/h) le disperse.' || E'\n' || 'Quand le nuage apparaît, chaque créature se trouvant à l''intérieur doit faire un jet de sauvegarde de Dextérité. Celles qui échouent reçoivent 10d8 dégâts de feu, les autres la moitié seulement. Une créature doit aussi faire ce jet quand elle entre dans la zone affectée pour la première fois du tour ou qu''elle y finit son tour.' || E'\n' || 'Le nuage s''éloigne de vous sur 3 mètres dans la direction de votre choix au début de chacun de vos tours.',
+        NULL
+    ),
+    (
+        'Tremblement de terre',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '150 mètres',
+        'V, S, M (une pincée de poussière, un caillou et un peu d''argile)',
+        'concentration, jusqu''à 1 minute',
+        'Vous créez une perturbation sismique en un point situé au niveau du sol, à portée dans votre champ de vision. Pendant toute la durée du sort, d''intenses secousses agitent le sol dans un cercle de 30 mètres de rayon centré sur le point choisi. Elles ébranlent toutes les créatures et structures en contact avec le sol de cette zone.' || E'\n' || 'Le sol affecté devient un terrain difficile. Toute créature qui se trouve en contact avec le sol et en pleine concentration doit réussir un jet de sauvegarde de Constitution sous peine de voir sa concentration se briser.' || E'\n' || 'Quand vous lancez ce sort et à la fin de chacun de vos tours passés à vous concentrer dessus, toutes les créatures en contact avec le sol de la zone affectée doivent faire unjet de sauvegarde de Dextérité. Celles qui échouent tombent à terre. Le sort a des effets supplémentaires selon le terrain affecté. C''est au MD de déterminer cela.' || E'\n' || '**Fissures**: Une fois que vous avez lancé le sort, des fissures s''ouvrent dans toute la zone affectée au début de votre tour suivant. 1d6 fissures s''ouvrent en des points choisis par le MD. Chacune fait 1d1O x 3 mètres de profondeur pour 3 mètres de large et s''étend d''un bout de la zone sismique à l''autre. Une créature qui se tient sur l''emplacement d''une fissure en train de s''ouvrir doit faire un jet de sauvegarde de Dextérité. Si elle le rate,elle tombe dedàns, sinon elle réussit à s''écarter à temps. Une structure s''effondre automatiquement si une fissure s''ouvre sous elle (voir plus loin).' || E'\n' || 'Structures. Les secousses infligent 50 dégâts contondants à toute structure en contact avec le sol au moment où vous lancez le sort et au début de chacun de vos tours jusqu''à la fin du sort. Si l''une d''elles tombe à 0 point de vie, elle s''effondre et blesse peut-être les créatures voisines. Une créature qui se trouve près d''un bâtiment en train de s''effondrer, à une distance égale ou inférieure à la moitié de la hauteur de ce bâtiment, doit faire un jet de sauvegarde de Dextérité. Si elle échoue, elle subit 5d6 dêgâts contondants, elle tombe à terre et elle est ensevelie sous les décombres. Il faut réussir un test de Force (Athlétisme) DD20 via une action pour y échapper. Le MD peut modifier le DD en fonction de la nature des décombres. Si la créature réussit son jet de sauvegarde, elle subit seulement la moitié des dégâts, ne tombe pas à terre et n''est pas ensevelie.',
+        NULL
+    ),
+    (
+        'Clone',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
+        '1 heure',
+        'contact',
+        'V, S, M (un diamant valant au moins 1 000 po et un cube d''au moins 2,5 centimètres d''arête de chair de la créature à cloner, le sort consommant ces deux composantes, ainsi qu''un réceptacle d''une valeur minimale de 2 000 po disposant d''un couvercle susceptible d''être scellé, et assez grand pour contenir une créature de taille Moyenne, comme une grande urne, un cercueil, une cavité remplie de boue creusée dans la terre ou un récipient de cristal rempli d''eau salée)',
+        'instantanée',
+        'Ce sort génère la réplique inerte d''une créature vivante, pour la protéger de la mort. Le clone se forme au sein d''un réceptacle scellé et grandit jusqu''à atteindre sa taille adulte et sa maturité en 120 jours; cependant, vous pouvez décider que le clone sera une version plus jeune de la créature qu''il reproduit. Il reste inerte et indéfiniment dans le même état tant que le réceptacle reste scellé.' || E'\n' || 'Une fois que le clone est arrivé à maturité, si la créature originale meurt, son âme se transfère dans le clone, à condition que cette âme soit libre et désireuse de revenir à la vie. D''un point de vue physique, le clone est identique à l''original. De plus, il possède la même personnalité, les mêmes souvenirs et les mêmes capacités, mais il n''hérite pas de son équipement. Les restes physiques de la créature originale ne disparaissent pas. S''ils ne sont pas détruits, ils deviennent inertes et ne peuvent pas servir à ramener la créature à la vie puisque son âme se trouve ailleurs.',
+        NULL
+    ),
+    (
+        'Labyrinthe',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
+        '1 action',
+        '18 mètres',
+        'V, S',
+        'concentration, jusqu''à 10 minutes',
+        'Vous bannissez une créature située à portée dans votre champ de vision dans un demi-plan labyrinthique. La cible y reste pendant toute la durée du sort ou jusqu''à ce qu''elle s''échappe du dédale.' || E'\n' || 'Elle peut utiliser une action pour tenter de s''évader. Pour cela, elle effectue un test d''Intelligence DD 20. Si elle le réussit, elle s''échappe et le sort se termine (les minotaures et les démons goristros réussissent automatiquement).' || E'\n' || 'Quand le sort se termine, la cible réapparaît à l''emplacement qu''elle a quitté ou, s''il est occupé, dans l''emplacement libre le plus proche.',
+        NULL
+    ),
+    (
+        'Télépathie',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
+        '1 action',
+        'illimitée',
+        'V, S, M (une paire d''anneaux en argent liés)',
+        '24 heures',
+        'Vous créez un lien télépathique entre vous et une créature consentante qui vous est familière. Elle peut se trouver n''importe où tant qu''elle est sur le même plan d''existence que vous. Le sort se termine si vous ne vous trouvez plus tous deux sur le même plan.' || E'\n' || 'Tant que le sort persiste, vous et la cible pouvez échanger instantanément des mots, des images, des sons et d''autres messages sensoriels grâce au lien qui vous unit. La cible sait que c''est avec vous qu''elle communique. Le sort permet à toute créature dotée d''une Intelligence minimale de 1 de comprendre la signification des mots que vous employez et de saisir le sens des messages sensoriels transmis.',
+        NULL
+    ),
+    (
+        'Bagou',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
+        '1 action',
+        'personnelle',
+        'V',
+        '1 heure',
+        'Jusqu''à la fin du sort, chaque fois que vous faites un test de Charisme, vous pouvez remplacer le nombre obtenu au dé par un 15. De plus,quoi que vous disiez, la magie visant à déterminer si vous dites la vérité vous croit toujours sincère.',
+        NULL
+    ),
+    (
+        'Demi-plan',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
+        '1 action',
+        '18 mètres',
+        'S',
+        '1 heure',
+        'Vous créez une porte floue sur une surface plate et solide située à portée dans votre champ de vision. Elle est assez large pour laisser passer sans mal des créatures de taille Moyenne. Quand quelqu''un ouvre la porte, elle donne sur un demi-plan ressemblant à une pièce vide de 9 mètres de côté (dans toutes les dimensions) faite de bois ou de pierre. La porte disparaît quand le sort se termine et les créatures et les objets encore dans le demi-plan y restent piégés, car elle s''efface aussi de leur côté.' || E'\n' || 'Vous pouvez créer un nouveau demi-plan pour chaque incantation du sort ou relier la porte à un demi-plan que vous avez précédemment créé via ce sort. De plus,si vous connaissez la nature et le contenu d''un demi-plan qu''une autre créature a créé grâce à ce sort, vous pouvez lui relier votre propre porte.',
+        NULL
+    ),
+    (
+        'Esprit faible',
+        8,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
+        '1 action',
+        '45 mètres',
+        'V, S, M (une poignée de sphères en argile, en cristal, en verre ou minérales)',
+        'instantanée',
+        'Vous vous attaquez à l''esprit d''une créature située à portée dans votre champ de vision en essayant de briser son intellect et sa personnalité. La cible subit 4d6 dégâts psychiques et doit faire un jet de sauvegarde d''Intelligence.' || E'\n' || 'Si la cible rate son jet, son Intelligence et son Charisme tombent à 1. Elle ne peut plus lancer de sorts, activer d''objet magique, comprendre une langue, ni communiquer de manière intelligible. En revanche, elle est toujours capable de reconnaître ses amis, de les suivre et même de les protéger.' || E'\n' || 'La créature peut refaire un jet de sauvegarde tous les 30 jours. Le sort se termine dès qu''elle réussit.' || E'\n' || 'On peut mettre un terme à ce sort avec _restauration supérieure_, _guérison_ ou _souhait_.',
+        NULL
+    );

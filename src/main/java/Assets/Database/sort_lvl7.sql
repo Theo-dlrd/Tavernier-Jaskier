@@ -1,0 +1,222 @@
+INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+VALUES
+    (
+        'Epée de Mordenkainen',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
+        '1 action',
+        '18 mètres',
+        'V, S, M (une épée en platine miniature avec le pommeau et la poignée en cuivre et zinc, d''une valeur de 250 po)',
+        'concentration, jusqu''à 1 minute',
+        'Vous créez un plan de force en forme d''épée qui plane à portée et persiste pendant toute la durée du sort.' || E'\n' || 'Dès que l''épée apparaît, vous faites une attaque de sort au corps à corps contre une cible de votre choix située dans un rayon de 1,50 mètre autour de l''épée. Si l''épée touche, la cible subit 3d10 dégâts de force. Tant que le sort n''est pas terminé, vous pouvez dépenser une action bonus à chacun de vos tours pour déplacer l''épée d''un maximum de 6 mètres afin de la conduire à un endroit situé dans votre champ de vision, puis répéter l''attaque contre la même cible ou une autre.',
+        NULL
+    ),
+    (
+        'Image projetée',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
+        '1 action',
+        '750 kilomètres',
+        'V, S, M (une petite réplique de votre personne construite avec des matériaux valant au moins 5 po)',
+        'concentration, jusqu''à 1 jour',
+        'Vous créez un double illusoire de votre personne qui persiste pendant toute la durée du sort. Ce double peut apparaître à n''importe quel endroit à portée, peu importent les obstacles interposés, à condition que vous l''ayez déjà vu auparavant. D''un point de vue visuel et auditif, l''illusion vous est tout à fait semblable; en revanche, elle est intangible. Si elle subit le moindre dégât, elle disparaît et le sort se termine.' || E'\n' || 'Vous pouvez utiliser votre action pour déplacer votre illusion jusqu''au double de votre vitesse, lui faire exécuter des gestes, la faire parler et se comporter comme bon vous semble. Elle imite vos manières à la perfection.' || E'\n' || 'Vous pouvez entendre et voir par l''intermédiaire des oreilles et des yeux de votre double, comme si vous occupiez son emplacement. À votre tour, vous pouvez dépenser une action bonus pour passer de l''utilisation de ses sens à celle des vôtres et inversement. Tant que vous utilisez ses sens, vous êtes aveugle et sourd à votre propre environnement.' || E'\n' || 'Les interactions physiques révèlent que l''image n''est qu''une illusion, car les objets la traversent. Si une créature utilise son action pour examiner l''image, elle comprend que c''est une illusion, à condition de réussir un test d''lntelligence (Investigation) contre le DD du jet de sauvegarde de votre sort. Si une créature perce l''illusion à jour, elle voit à travers l''image et les sons produits par l''illusion sonnent creux à ses oreilles.',
+        NULL
+    ),
+    (
+        'Manoir somptueux de Mordenkainen',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
+        '1 minute',
+        '90 mètres',
+        'V, S, M (un portrait miniature gravé dans de l''ivoire,un bout de marbre poli et une minuscule cuillère en argent,chaque objet devant valoir au minimum 5 po)',
+        '24 heures',
+        'Vous invoquez une demeure extraplanaire à portée qui persiste pendant toute la durée du sort. À vous de choisir où se situe sa seule entrée. Cette dernière scintille légèrement et mesure 1,50 mètre de large pour 3 mètres de haut. Vous et toutes les créatures que vous désignez lors de l''incantation êtes libres d''entrer et de sortir de cette demeure extraplanaire, tant que son portail reste ouvert. Vous pouvez l''ouvrir ou le fermer si vous vous tenez à 9 mètres ou moins de lui. Quand le portail est fermé, il est invisible.' || E'\n' || 'Un splendide vestibule s''ouvre derrière le portail et dessert de nombreuses pièces. Les lieux sont propres et l''atmosphère tiède et agréable.' || E'\n' || 'Vous pouvez disposer le plan des lieux comme bon vous semble, mais la surface totale ne peut pas excéder 50 cubes, chaque cube mesurant 3 mètres d''arête. L''endroit est meublé et décoré selon vos souhaits et contient assez de nourriture pour un banquet de neuf plats destiné à une centaine de convives au maximum. Une équipe de cent serviteurs presque translucides s''occupent de tous ceux qui pénètrent dans la demeure. À vous de décider de l''apparence visuelle de ces domestiques et de leur tenue. Ils obéissent aveuglément à tous vos ordres. Chacun est en mesure d''accomplir n''importe quelle tâche à la portée d''un serviteur humain ordinaire,mais les domestiques ne peuvent ni attaquer ni effectuer une action visant à nuire directement à une autre créature. Ils peuvent donc aller chercher des affaires, faire le ménage, raccommoder et plier les habits, allumer la cheminée, servir les plats et la boisson, etc. Ils peuvent se rendre partout dans la demeure, mais sont incapables de la quitter. Les meubles et autres objets créés à l''aide de ce sort se dissipent en volutes de fumée si quelqu''un les sort de la demeure. Quand le sort se termine, toutes les créatures qui se trouvent dans l''espace extradimensionnel sont expulsées dans les emplacements libres les plus proches de l''entrée.',
+        NULL
+    ),
+    (
+        'Mirage',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
+        '10 minutes',
+        'vision',
+        'V, S',
+        '10 jours',
+        'Vous donnez à un terrain d''au maximum 2,5 kilomètres carrés la même apparence visuelle, sonore, olfactive et générale qu''un autre type de terrain. En revanche, sa forme globale ne change pas. Vous pouvez maquiller un champ ou une route pour lui donner l''air d''un marais, d''une colline,d''une crevasse ou d''un autre terrain difficile ou impraticable. Vous pouvez faire passer une mare pour une prairie herbeuse, un précipice pour une pente douce ou un goulet rocailleux pour une route aussi large que lisse.' || E'\n' || 'Vous pouvez aussi modifier l''apparence des structures ou en ajouter là où n''y en a pas. En revanche, le sort est incapable de déguiser, dissimuler ou ajouter des créatures.' || E'\n' || 'L''illusion comprend des composantes auditives, visuelles, tactiles et olfactives, elle peut donc changer un sol dégagé en terrain difficile (ou inversement) ou gêner les déplacements dans la zone. Tout élément de terrain illusoire (comme une pierre ou une brindille) disparaît dès qu''il quitte la zone d''effet du sort.' || E'\n' || 'Les créatures dotées de vision parfaite distinguent le véritable terrain derrière l''illusion, mais les autres composantes restent en place; elles savent donc qu''elles ont affaire à une illusion, mais peuvent toujours interagir physiquement avec celle-ci.',
+        NULL
+    ),
+    (
+        'Régénération',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
+        '1 minute',
+        'contact',
+        'V, S, M (un moulin à prières et de l''eau bénite)',
+        '1 heure',
+        'Vous touchez une créature et stimulez ses capacités de guérison naturelle. La cible récupère 4d8+15 points de vie. Pendant toute la durée du sort, elle récupère aussi 1 point de vie au début de chacun de ses tours (10 points de vie par minute).' || E'\n' || 'Si la cible a des membres sectionnés (des doigts, des jambes, une queue, etc.), ils repoussent au bout de 2 minutes. Si vous disposez de la partie amputée et la maintenez contre le moignon, le sort ressoude instantanément le membre au moignon.',
+        NULL
+    ),
+    (
+        'Résurrection',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
+        '1 heure',
+        'contact',
+        'V, S, M (un diamant d''une valeur minimale de 1 000 po, que le sort consume)',
+        'instantanée',
+        'Vous touchez le cadavre d''une créature décédée depuis un siècle au maximum, qui n''est pas morte de vieillesse et qui n''est pas un mort-vivant. Si son âme est libre et consentante, la cible ressuscite avec tous ses points de vie.' || E'\n' || 'Ce sort neutralise les poisons et maladies ordinaires qui affectaient éventuellement la cible à sa mort, mais il ne guérit pas les maladies magiques, les malédictions et autres effets de même type. Il faut en débarrasser la cible avant de la ressusciter, sans quoi ils l''affligent de nouveau dès qu''elle revient à la vie.' || E'\n' || 'Ce sort referme les blessures mortelles et restaure les parties de corps éventuellement manquantes.' || E'\n' || 'Le retour d''entre les morts est une rude épreuve qui se traduit par un malus de -4 auxjets d''attaque et de sauvegarde ainsi qu''aux tests de caractéristique. Chaque fois que la cible termine un long repos, ce malus se réduit de 1 jusqu''à disparaître.' || E'\n' || 'Si ce sort est destiné à une créature décédée depuis un an ou plus, son incantation est extrêmement éprouvante. Après cela, vous ne pouvez plus lancer de sort et vous êtes désavantagé lors des jets d''attaque et de sauvegarde et des tests de caractéristique jusqu''à ce que vous ayez terminé un long repos.',
+        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/revivify_necromancy_spell_bg3_wiki_64px.png'
+    ),
+    (
+        'Symbole',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
+        '1 minute',
+        'contact',
+        'V,S,M (mercure,phosphore et poudre de diamant et d''opale d''une valeur totale d''au moins 1 000 po, que le sort consume)',
+        'jusqu''à dissipation ou déclenchement',
+        'Quand vous lancez ce sort, vous inscrivez un glyphe néfaste sur une surface (comme une partie du sol, un pan de mur ou une table) ou dans un objet que l''on peut refermer pour le dissimuler, comme un livre, un parchemin ou un coffre au trésor. Si vous optez pour une surface, le glyphe peut couvrir une zone de 3 mètres de diamètre au maximum. Si vous choisissez un objet, il ne faut plus le déplacer par la suite: si quelqu''un le déplace à plus de 3 mètres de l''endroit où vous avez jeté ce sort, Je glyphe se brise et le sort se termine sans avoir été déclenché.' || E'\n' || 'Le glyphe est presque invisible. Pour le discerner, il faut réussir un test d''Intelligence (Investigation) contre le DD du jet de sauvegarde de votre sort.' || E'\n' || 'C''est lors de l''incantation que vous décidez de ce qui déclenchera le sort. Pour les glyphes tracés sur une surface quelconque, les déclencheurs les plus courants consistent à toucher le glyphe ou à se tenir dessus, à déplacer un objet recouvrant le glyphe, à s''approcher à une certaine distance du glyphe ou encore à manipuler l''objet sur lequel le glyphe est tracé. Pour les glyphes inscrits dans un objet, on trouve parmi les déclencheurs les plus répandus le fait d''ouvrir l''objet, de s''en approcher à une certaine distance, ou de voir ou de lire le glyphe.' || E'\n' || 'Vous pouvez affiner le déclencheur,de façon à ce que le sort s''active sous certaines conditions ou en fonction de certaines caractéristiques physiques (comme le poids ou la taille), ou selon un type de créature (pour un glyphe destiné aux guenaudes ou aux métamorphes par exemple). Vous pouvez aussi définir des conditions pour que certaines créatures ne déclenchent pas le glyphe, en prononçant un mot de passe, par exemple.' || E'\n' || 'Lorsque vous dessinez le glyphe, vous devez choisir l''une des options suivantes. Une fois le glyphe déclenché, il se met à luire et emplit une sphère de 18 mètres de rayon avec une faible lumière pendant 10 minutes, après quoi, le sort se termine. Chaque créature présente dans la sphère quand le glyphe s''active est visée par ses effets,tout comme une créature qui entre dans la sphère pour la première fois de son tour ou qui y termine son tour.' || E'\n' || '**Démence**: Chaque cible doit faire un jet de sauvegarde d''Intelligence. Celles qui échouent deviennent folles pendant 1 minute. Une créature démente ne peut pas entreprendre la moindre action,ne comprend pas ce que disent les autres créatures, ne peut pas lire et ne parle que dans un charabia incompréhensible. C''est le MD qui contrôle ses déplacements qui deviennent complètement erratiques.' || E'\n' || '**Désespoir**: Chaque cible doit faire un jet de sauvegarde de Charisme. Celles qui échouent sont submergées par le désespoir pendant 1 minute. Pendant tout ce temps, elles ne peuvent pas attaquer ni viser une créature avec une capacité, un sort ou un autre effet magique hostiles.' || E'\n' || '**Discorde**: Chaque cible doit faire unjet de sauvegarde de Constitution. Celles qui le ratent se mettent à se quereller avec les autres créatures pendant 1 minute. Pendant tout ce temps, elles sont incapables de tenir une conversation sensée et sont désavantagées lors des jets d''attaque et des tests de caractéristique.' || E'\n' || '**Douleur**: Chaque cible doit faire un jet de sauvegarde de Constitution. Celles qui échouent sont neutralisées par une douleur insoutenable pendant 1 minute.' || E'\n' || '**Étourdissement**: Chaque cible doit faire un jet de sauvegarde de Sagesse. Celles qui échouent sont étourdies pendant 1 minute.' || E'\n' || '**Frayeur**: Chaque cible doit faire un jet de sauvegarde de Sagesse. Celles qui échouent sont terrorisées pendant 1 minute. Une cible terrorisée lâche tout ce qu''elle tient et doit s''éloigner du glyphe de 9 mètres au minimum à chacun de ses tours, dans la mesure du possible.' || E'\n' || '**Mort**: Chaque cible doit faire un jet de sauvegarde de Constitution. Celles qui échouent subissent lOdlO dégâts nécrotiques, les autres la moitié seulement.' || E'\n' || '**Sommeil**: Chaque cible doit faire un jet de sauvegarde de Sagesse. Celles qui échouent tombent inconscientes pendant 10 minutes. Une telle créature se réveille si elle subit des dégâts ou si quelqu''un utilise son action pour la réveiller en la secouant ou la giflant.',
+        NULL
+    ),
+    (
+        'Invoquer un céleste',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
+        '1 minute',
+        '27 mètres',
+        'V, S',
+        'concentration, jusqu''à 1 heure',
+        'Vous invoquez un céleste doté d''un indice de dangerosité de 4 ou moins. Il apparaît dans une case inoccupée située à portée dans votre champ de vision. Le céleste disparaît dès qu''il tombe à O point de vie ou quand le sort se termine.' || E'\n' || 'Le céleste se montre amical envers vous et vos compagnons. Lancez l''initiative pour lui, sachant qu''il dispose de ses propres tours de jeu. Il obéit aux ordres verbaux que vous lui donnez (sans que cela vous demande d''utiliser une action), tant qu''ils ne vont pas à l''encontre de son alignement. En l''absence d''ordre, il se défend contre les créatures hostiles, mais n''entreprend pas d''autre action.' || E'\n' || 'C''est le MD qui dispose des statistiques du céleste.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 9 ou plus, vous invoquez un céleste doté d''un indice de dangerosité de 5 ou moins.',
+        NULL
+    ),
+    (
+        'Parole divine',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
+        '1 action bonus',
+        '9 mètres',
+        'V',
+        'instantanée',
+        'Vous prononcez une parole divine, emplie de la puissance qui a façonné le monde à l''aube de la création. Choisissez autant de créatures que vous le souhaitez parmi celles que vous voyez, dans la portée du sort. Chaque créature qui vous entend doit réussir un jet de sauvegarde de Charisme ou subir un effet selon la valeur actuelle de ses points de vie.' || E'\n' || '* 50 pv ou moins : assourdie pendant 1 minute' || E'\n' || '* 40 pv ou moins : assourdie et aveuglée pendant 10 minutes' || E'\n' || '* 30 pv ou moins : aveuglée, assourdie et étourdie pendant 1 heure' || E'\n' || '* 20 pv ou moins : tuée sur le coup' || E'\n' || 'Indépendamment de ses points de vie actuels, un céleste, un élémentaire, une fée ou un fiélon qui échoue son jet est retourné à son plan d''origine (s''il n''y est pas déjà) et il ne peut revenir sur votre plan pendant 24 heures, peu importe le moyen, à l''exception du sort _souhait_.',
+        NULL
+    ),
+    (
+        'Boule de feu à explosion retardée',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '45 mètres',
+        'V, S, M (une petite boule de guano de chauve- souris et du soufre)',
+        'concentration, jusqu''à 1 minute',
+        'Un rayon de lumière jaune jaillit de votre doigt tendu et se condense pour former une bille luisante en un point de votre choix situé à portée pendant toute la durée du sort. Quand le sort se termine, soit parce que votre concentration se brise, soit parce que vous y mettez volontairement un terme, la bille se dilate dans un grondement sourd et explose en une gerbe de feu qui s''étend en franchissant les angles éventuels. Toutes les créatures situées dans une sphère de 6 mètres de rayon centrée sur le point où se trouvait la bille doivent faire un jet de sauvegarde de Dextérité. Celles qui échouent reçoivent un montant de dégâts de feu égal au total de dégâts accumulés (voir plus loin), les autres reçoivent la moitié de ce montant seulement.' || E'\n' || 'De base, le sort inflige 12d6 dégâts de feu. À la fin de votre tour, si la bille n''a pas encore explosé, ces dégâts augmentent de 1d6.' || E'\n' || 'Si quelqu''un touche la bille avant la fin de l''intervalle, il doit faire un jet de sauvegarde de Dextérité. S''il échoue, le sort se termine immédiatement et la bille explose. S''il réussit, il peut lancer la bille à une distance maximale de 12 mètres. Si elle touche un objet solide ou une créature, le sort se termine et la bille explose.' || E'\n' || 'Les flammes endommagent les objets qui se trouvent dans la zone et embrasent les objets inflammables qui ne sont ni portés ni transportés.' || E'\n' || '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 8 ou plus, les dégâts de base augmentent de 1d6 par niveau au-delà du 7e.',
+        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/chromatic_orb_fire_spell_icon_baldurs_gate3_wiki_guide_64px.png'
+    ),
+    (
+        'Changement de plan',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
+        '1 action',
+        'contact',
+        'V, S, M (un diapason de métal valant au moins 250 po, harmonisé avec un plan d''existence donné)',
+        'instantanée',
+        'Vous et un maximum de huit autres créatures consentantes vous donnez la main pour former un cercle et êtes transportés sur un autre plan d''existence. Vous pouvez spécifier une destination en termes génériques, comme la Cité d''airain sur le plan élémentaire du Feu ou le palais de Dispater dans la deuxième strate des Neuf Enfers. Vous apparaîtrez alors à cet endroit ou à proximité. Par exemple, si vous tentez d''atteindre la Cité d''airain, vous pouvez arriver dans sa rue de l''Acier, devant la Porte des cendres ou de l''autre côté de la mer de Feu d''où vous la contemplez. C''est au MD de décider.' || E'\n' || 'Sinon, si vous connaissez la séquence de glyphes magiques d''un cercle de téléportation présent sur un autre plan d''existence, ce sort peut vous conduire dans ce cercle. S''il est trop étroit pour accueillir toutes les créatures qui voyagent avec vous, les créatures en trop apparaissent dans les emplacements inoccupés les plus proches du cercle.' || E'\n' || 'Vous pouvez aussi utiliser ce sort pour bannir une créature non consentante sur un autre plan. Choisissez une créature à votre portée et faites une attaque de sort au corps à corps contre elle. Si vous touchez, elle doit faire un jet de sauvegarde de Charisme. Si elle le rate, elle est emportée en un endroit aléatoire du plan d''existence que vous nommez. Une fois là, c''est à elle de trouver un moyen de rentrer sur son plan natal.',
+        NULL
+    ),
+    (
+        'Doigt de mort',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
+        '1 action',
+        '18 mètres',
+        'V, S',
+        'instantanée',
+        'Vous envoyez de l''énergie négative dans le corps d''une créature située à portée dans votre champ de vision, ce qui lui inflige des douleurs déchirantes. La cible doit faire un jet de sauvegarde de Constitution. Si elle échoue, elle subit 7d8+30 dégâts nécrotiques, la moitié seulement si elle réussit.' || E'\n' || 'Si ce sort achève un humanoïde, ce dernier se relève au début de votre prochain tour sous forme de zombi à jamais sous votre contrôle. Il suit vos ordres verbaux au mieux de ses capacités.',
+        NULL
+    ),
+    (
+        'Embruns prismatique',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        'personnelle (cône de 18 mètres)',
+        'V, S',
+        'instantanée',
+        'Huit rayons de lumière multicolores jaillissent de votre main. Chacun a une couleur différente et possède des pouvoirs et objectifs distincts. Chaque créature présente dans un cône de 18 mètres doit faire un jet de sauvegarde de Dextérité. Lancez 1d8 par cible pour savoir quelle couleur l''affecte.' || E'\n' || '**1. Rouge**: La cible subit 10d6 dégâts de feu si elle rate son jet de sauvegarde, la moitié seulement si elle le réussit.' || E'\n' || '**2. Orange**: La cible subit 10d6 dégâts d''acide si elle rate son jet de sauvegarde, la moitié seulement si elle le réussit.' || E'\n' || '**3. Jaune**: La cible subit 10d6 dégâts de foudre si elle rate son jet de sauvegarde, la moitié seulement si elle le réussit.' || E'\n' || '**4. Vert**: La cible subit 1Od6 dégâts de poison si elle rate son jet de sauvegarde, la moitié seulement si elle le réussit.' || E'\n' || '**5. Bleu**: La cible subit 10d6 dégâcs de froid si elle rate son jet de sauvegarde, la moitié seulement si elle le réussit.' || E'\n' || '**6. Indigo**: Si la cible rate son jet de sauvegarde, elle est entravée et doit alors faire un jet de sauvegarde de Constitution à la fin de chacun de ses tours. Si elle en réussit trois, le sort se termine, si elle en rate trois, elle se change définitivement en pierre et elle est en proie à l''état pétrifié. Les succès et les échecs n''ont pas à être consécutifs : tenez le compte dans chaque catégorie jusqu''à ce que l''une d''elles arrive à trois.' || E'\n' || '**7. Violet**: La cible est aveugle si elle rate son jet de sauvegarde. Elle doit alors faire un jet de sauvegarde de Sagesse au début de votre prochain tour. Si elle le réussit, elle recouvre la vue ; si elle Je rate, elle est emportée sur un autre plan d''existence choisi par le MD et recouvre aussi la vue. (En général, une créature qui ne se trouve pas sur son propre plan d''existence est bannie là-bas tandis que les autres créatures sont envoyées sur le plan astral ou éthéré).' || E'\n' || '**8. Spécial**: Deux rayons viennent frapper la cible. Relancez deux fois le dé en le relançant chaque fois que vous sortez un 8.',
+        NULL
+    ),
+    (
+        'Forme éthérée',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
+        '1 action',
+        'personnelle',
+        'V, S',
+        'jusqu''à 8 heure',
+        'Vous pénétrez dans la région frontalière du plan éthéré, dans une zone où il chevauche votre plan actuel. Vous restez sur la Frontière éthérée pendant toute la durée du sort ou jusqu''à ce que vous utilisiez une action pour y mettre fin. Pendant cette période, vous pouvez vous déplacer dans n''importe quelle direction. Si vous optez pour un déplacement vers le haut ou le bas, le prix du mouvement est doublé, chaque mètre de déplacement vous coûtant un mètre supplémentaire. Vous voyez et entendez ce qui se passe sur le plan d''où vous venez, mais tout y est gris et vous ne voyez plus rien au-delà de 18 mètres.' || E'\n' || 'Une fois sur le plan éthéré, vous pouvez affecter uniquement des créatures situées sur ce plan et elles sont les seules à pouvoir vous affecter. Celles qui ne se trouvent pas sur ce plan ne vous perçoivent pas et sont incapables d''interagir avec vous, à moins qu''un pouvoir spécial ou magique ne le leur permette.' || E'\n' || 'Les objets et effets qui ne se trouvent pas sur le plan éthéré n''ont aucune incidence sur vous, ce qui vous permet de traverser des objets que vous apercevez sur le plan d''où vous venez.' || E'\n' || 'Quand le sort se termine, vous retournez immédiatement sur le plan d''où vous venez, à l''endroit que vous occupez actuellement. Si vous occupez le même emplacement qu''un objet solide ou une créature lorsque cela se produit, vous êtes immédiatement projeté dans l''espace inoccupé le plus proche susceptible de vous accueillir et subissez un montant de dégâts de force égal à 6,5 x le nombre de mètres sur lesquels vous avez été projeté.' || E'\n' || 'Ce sort n''a aucun effet si vous le lancez alors que vous vous trouvez sur le plan éthéré ou sur un plan non limitrophe, comme les plans extérieurs.' || E'\n'|| '**À plus haut niveau**: Si vous lancez ce sort en utilisant un emplacement de niveau 8 ou plus, vous pouvez affecter jusqu''à trois créatures consentantes (vous y compris) par niveau au-delà du 7e. Toutes ces créatures doivent se trouver dans un rayon de 3 mètres autour de vous quand vous lancez le sort.',
+        NULL
+    ),
+    (
+        'Inversion de la gravité',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
+        '1 action',
+        '30 mètres',
+        'V, S, M (de la magnétite et de la limaille de fer)',
+        'concentration, jusqu''à 1 minutes',
+        'Ce sort inverse la gravité dans un cylindre de 15 mètres de rayon et 30 mètres de haut centré sur un point à portée. Toutes les créatures et tous les objets qui ne sont pas ancrés au sol, d''une manière ou d''une autre, tombent vers le haut jusqu''à atteindre le sommet de la zone affectée par le sort. Une créature peut faire un jet de sauvegarde de Dextérité pour s''accrocher à un objet fixe situé à sa portée, afin d''éviter la chute.' || E'\n' || 'Si un objet solide (comme un plafond) se trouve sur la trajectoire de la chute,les créatures et les objets le percutent comme lors d''une chute ordinaire vers le bas. Si un objet ou une créature atteint le sommet de la zone affectée sans heurter quoi que ce soit, il reste là, à osciller légèrement, pendant toute la durée du sort.' || E'\n' || 'Une fois la durée du sort écoulée, les objets et les créatures affectés retombent à terre.',
+        NULL
+    ),
+    (
+        'Téléportation',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
+        '1 action',
+        '3 mètres',
+        'V',
+        'instantanée',
+        'Ce sort vous transporte instantanément à la destination de votre choix, ainsi qu''un maximum de huit créatures consentantes de votre choix situées à portée et dans votre champ de vision ou bien ainsi qu''un unique objet situé à portée et dans votre champ de vision. Si vous prenez un objet pour cible, il doit tenir dans un cube de 3 mètres de côté et il ne doit pas être porté ni transporté par une créature non consentante. Vous devez choisir une destination connue, située sur le même plan d''existence que vous. C''est votre degré de familiarité avec la destination qui détermine vos chances d''arriver sur place. Le MD lance 1d1O0 et consulte la table suivante.' || E'\n' || '**Familiarité = Incident / Zone similaire / A proximité / Sur place**' || E'\n' || 'Cercle permanent = - / - / - / 01-100' || E'\n' || 'Objet associé = - / - / - / 01-100' || E'\n' || 'Très familier = 01-05 / 06-13 / 14-24 / 25-100' || E'\n' || 'Vu à quelques reprises = 01-33 / 34-43 / 44-53 / 54-100' || E'\n' || 'Vu une seule fois = 01-43 / 44-53 / 54-73 / 74-100' || E'\n' || 'Description = 01-43 / 44-53 / 54-73 / 74-100' || E'\n' || 'Destination factice = 01-50 / 51-100 / - / - ' || E'\n' || '**Familiarité**: « Cercle permanent » désigne un cercle de téléportation dont vous connaissez la séquence de symboles. « Objet associé » indique que vous possédez un objet prélevé à la destination choisie au cours des six derniers mois, comme un livre sorti de l''étagère de la bibliothèque d''un magicien, les draps d''une suite royale ou un éclat de marbre arraché au tombeau secret d''une liche.' || E'\n' || '« Très familier » désigne un endroit où vous vous êtes souvent rendu, un lieu que vous avez soigneusement étudié ou un endroit que vous voyez au moment de l''incantation. « Vu à quelques reprises » correspond aux endroits que vous avez vus plus d''une fois, mais avec lesquels vous n''êtes pourtant pas très familier. « Vu une fois » représente un lieu vu une seule fois, éventuellement par magie. « Description » correspond à un endroit que vous connaissez seulement via la description d''autrui, aussi bien au niveau de son emplacement que de son apparence, éventuellement grâce à une carte.' || E'\n' || '« Destination factice » désigne les endroits qui n''existent pas, si par exemple vous avez tenté de scruter le sanctuaire d''un ennemi mais n''avez vu qu''une il lusion ou si vous essayez de vous téléporter en un endroit familier qui n''existe plus.' || E'\n' || '**Sur place**: Vous et vos compagnons (ou l''objet téléporté) apparaissez exactement où vous le souhaitiez.' || E'\n' || '**À proximité**: Vous et vos compagnons (ou l''objet téléporté) apparaissez à une distance aléatoire de votre destination, éloignés dans une direction tout aussi aléatoire. La distance qui vous sépare de votre destination est de 1d1O x 1d1O % de la distance que le sort vous a fait parcourir. Par exemple,si vous essayez de vous téléporter à une destination située à 180 kilomètres de votre position, que vous arrivez à proximité, et que vous obtenez 5 et 3 aux d10, vous allez arriver à 15% de distance de votre destination, c''est-à-dire à 27 kilomètres. Le MD détermine la direction dans laquelle vous vous êtes éloignés de la cible en lançant un d8, le 1 représentant le nord, le 2 le nord-est, le 3 l''est, etc., jusqu''à faire le tour de la rose des vents. Si vous comptiez vous téléporter dans une cité portuaire et arrivez à 27 kilomètres au large de ses côtes, en pleine mer, vous pourriez bien avoir quelques ennuis.' || E'\n' || '**Zone similaire**: Vous et vos compagnons (ou l''objet téléporté) arrivez dans une zone différente de celle prévue, mais dotée de caractéristiques visuelles ou thématiques similaires. Par exemple, si vous comptiez regagner votre laboratoire, vous pourriez arriver dans celui d''un autre magicien ou dans une boutique d''alchimie qui possède nombre d''outils et d''appareils présents dans votre laboratoire. En général, vous apparaissez dans l''endroit ressemblant à votre destination le plus proche de celle-ci, mais comme le sort n''a pas de limite de portée, vous pouvez tout à fait arriver n''importe où sur votre plan d''existence.' || E'\n' || '**Incident**: La magie imprévisible du sort complique le voyage. Chaque créature téléportée (ou l''objet téléporté) subit 3d10 dégâts de force tandis que le MD relance le dé pour savoir où vous arrivez (sachant qu''il peut se produire plusieurs incidents, chacun infligeant ses propres dégâts).',
+        NULL
+    ),
+    (
+        'Tempête de feu',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '45 mètres',
+        'V, S',
+        'instantanée',
+        'Une tempête faite de nuages de feu ronflant se forme à l''endroit que vous avez choisi, à portée. La tempête occupe une zone composée d''un maximum de dix cubes de 3 mètres d''arête, que vous pouvez disposer comme bon vous semble. Chaque cube doit avoir au moins une face adjacente à celle d''un autre cube. Chaque créature de la zone doit faire un jet de sauvegarde de Dextérité. Celles qui échouent subissent 7d10 dégâts de feu, les autres la moitié seulement.' || E'\n' || 'Le feu endommage les objets présents dans la zone et embrase les objets inflammables de la zone que personne ne porte ou ne transporte. Si vous le désirez, les flammes peuvent épargner la végétation présente dans la zone.',
+        NULL
+    ),
+    (
+        'Séquestration',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
+        '1 action',
+        'contact',
+        'V, S, M (une poudre de diamant, d''émeraude, de rubis et de saphir d''une valeur minimum de 5 000 po, que le sort consume)',
+        'jusqu''à dissipation',
+        'Grâce à ce sort, vous pouvez dissimuler une créature consentante ou un objet qui sera invisible à tout moyen de détection pendant toute la durée du sort. Quand vous lancez le sort et touchez la cible, elle devient invisible et ne peut plus être la cible de sorts de divination. De plus, les organes sensoriels de scrutation issus d''un sort de divination ne la perçoivent plus. Si la cible est une créature, elle entre en état d''animation suspendue. Le temps ne s''écoule plus pour elle et elle ne vieillit plus.' || E'\n' || 'Vous pouvez décider d''une condition qui mettra un terme prématuré au sort. Ce peut être ce que vous voulez, mais ce doit être visible ou se produire dans un rayon de 1,5 kilomètre autour de la cible. Par exemple, « au bout de 1 000 ans » ou « quand la tarasque se réveillera ». Ce sort se termine également si la cible subit le moindre dégât.',
+        NULL
+    ),
+    (
+        'Simulacre',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
+        '12 heures',
+        'contact',
+        'V, S, M (de la neige ou de la glace en quantité suffisante pour faire une reproduction grandeur nature de la créature à dupliquer; des cheveux, des rognures d''ongles ou un autre échantillon de la créature à dupliquer, à placer dans la neige ou la glace, et de la poudre de rubis d''une valeur minimale de 1 500 po que le sort consume, à saupoudrer sur le double)',
+        'jusqu''à dissipation',
+        'Vous façonnez un double illusoire d''une bête ou d''un humanoïde à portée pendant toute la durée de l''incantation. Le double est une créature partiellement réelle, faite de neige ou de glace, qui peut accomplir des actions et qui est affectée par les éléments extérieurs comme une créature normale. II ressemble en tout point à l''original, mais il n''a que la moitié de son maximum de points de vie et n''a pas d''équipement lors de sa création. En dehors de cela, il utilise toutes les statistiques de la créature qu''il représente.' || E'\n' || 'Le simulacre se montre amical envers vous et les créatures que vous désignez. Il obéit à vos ordres vocaux, se déplace et agit comme vous le souhaitez et agit à votre tour lors des combats. Le simulacre est incapable d''apprendre et de gagner en puissance, il ne monte donc jamais de niveau et ne développe jamais ses pouvoirs. Il ne peut pas non plus récupérer un emplacement de sort dépensé.' || E'\n' || 'Si le simulacre est endommagé, vous pouvez le réparer dans un laboratoire d''alchimie en utilisant des herbes rares et des minéraux d''une valeur de 100 po par point de vie à régénérer. Le simulacre persiste jusqu''à ce qu''il tombe à O point de vie, il se transforme alors en neige et fond instantanément.' || E'\n' || 'Si vous lancez de nouveau ce sort, l''éventuel double que vous déjà en activité est détruit sur-le-champ.',
+        NULL
+    ),
+    (
+        'Cage de force',
+        7,
+        (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
+        '1 action',
+        '30 mètres',
+        'V, S, M (poussière de rubis d''une valeur de 1 500 po)',
+        '1 heure',
+        'Une prison immobile et invisible, en forme de cube et faite de force magique, se forme soudain autour d''une zone de votre choix située à portée. Ce peut être une cage ou une boîte hermétique, à votre guise.' || E'\n' || 'Une prison en forme de cage peut faire un maximum de 6 mètres d''arête et dispose de barreaux d''un centimètre d''épaisseur placés à un centimètre d''intervalle.' || E'\n' || 'Une prison en forme de boîte peut faire un maximum de 3 mètres d''arête et forme une barrière pleine qui empêche la matière de passer. Elle bloque aussi le passage des sorts lancés vers l''intérieur ou l''extérieur.' || E'\n' || 'Quand vous lancez ce sort, chaque créature qui se trouve entièrement au sein de la zone affectée se retrouve prise au piège. Une créature qui s''y trouve seulement en partie ou qui s''avère trop grande pour y tenir est repoussée vers l''extérieur de la zone jusqu''à ce qu''elle la quitte complètement.' || E'\n' || 'Une créature enfermée dans la cage ne peut pas la quitter par des moyens non magiques. Si elle tente d''utiliser la téléportation ou les déplacements interplanaires pour s''échapper, elle doit d''abord faire un jet de sauvegarde de Charisme. Si elle le réussit, elle peut utiliser cette magie pour fuir, sinon elle ne parvient pas à quitter la cage et l''utilisation du sort ou de l''effet est gaspillée. La cage s''étend aussi sur le plan éthéré, ce qui bloque les déplacements éthérés.' || E'\n' || 'La _dissipation de la magie_ est sans effet sur ce sort.',
+        NULL
+    );
