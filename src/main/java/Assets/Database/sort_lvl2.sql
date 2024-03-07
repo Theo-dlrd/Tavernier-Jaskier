@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Apaisement des émotions',
+        NULL,
+        'Calm emotions',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Bouche magique',
+        NULL,
+        'Magic mouth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 minute',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Chauffer le métal',
+        'Métal brûlant',
+        'Heat metal',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Localiser des animaux ou des plantes',
+        'Localisation d''animaux ou de plantes',
+        'Locate animals or plants',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Messager animal',
+        NULL,
+        'Animal messenger',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -56,6 +66,8 @@ VALUES
         NULL
     ),
     (
+        'Silence',
+        NULL,
         'Silence',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Arme spirituelle',
+        NULL,
+        'Spiritual weapon',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action bonus',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Augure',
+        NULL,
+        'Augury',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 minute',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Doux repos',
+        'Préservation des morts',
+        'Gentle repose',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Flamme éternelle',
+        NULL,
+        'Continual flame',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Lien de protection',
+        NULL,
+        'Warding bond',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Prière de soins',
+        'Prière de guérison',
+        'Prayer of healing',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '10 minutes',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Trouver les pièges',
+        'Detection des pièges',
+        'Find traps',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -141,10 +167,12 @@ VALUES
         'V, S',
         'instantanée',
         'Vous percevez la présence de tout piège se trouvant à portée et dans votre champ de vision. Concernant ce sort, le terme de piège désigne toute chose qui inflige soudainement ou de façon inattendue un effet considéré comme néfaste ou indésirable et que son créateur a conçue dans ce but. Ainsi, le sort prévient si une zone est affectée par une alarme, un _glyphe de garde_ ou une fosse piégée mécanique, mais il ne révèle pas une faiblesse naturelle dans un plancher, un plafond instable ou une doline cachée.' || E'\n' || 'Le sort indique simplement qu''il y a un piège ; il ne précise pas où, mais vous donne une idée générale de la nature du danger qu''il représente.',
-        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/pass_without_trace_spell_baldursgate3_wiki_guide_35px_.png'
+        NULL
     ),
     (
         'Croissance d''épines',
+        NULL,
+        'Spike growth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Lame de feu',
+        NULL,
+        'Flame blade',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Passage sans trace',
+        NULL,
+        'Pass without trace',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Peau d''écorce',
+        NULL,
+        'Barkskin',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Sens animal',
+        NULL,
+        'Beast sense',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Sphère de feu',
+        NULL,
+        'Flaming sphere',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Agrandir/rétrécir',
+        'Agrandissement/rétrécissement',
+        'Enlarge/reduce',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -222,6 +262,8 @@ VALUES
     ),
     (
         'Amélioration de caractéristique',
+        NULL,
+        'Enhance ability',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Bourrasque',
+        NULL,
+        'Gust of wind',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -244,6 +288,8 @@ VALUES
     ),
     (
         'Fracassement',
+        'Briser',
+        'Shatter',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Cécité/surdité',
+        NULL,
+        'Blindness/Deafness',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Couronne du dément',
+        NULL,
+        'Crown of madness',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Déblocage',
+        NULL,
+        'Knock',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Détection des pensées',
+        NULL,
+        'Detect thoughts',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -299,6 +353,8 @@ VALUES
     ),
     (
         'Flou',
+        NULL,
+        'Blur',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -310,6 +366,8 @@ VALUES
     ),
     (
         'Force fantasmagorique',
+        NULL,
+        'Phantasmal force',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -321,6 +379,8 @@ VALUES
     ),
     (
         'Image miroir',
+        NULL,
+        'Miror image',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
