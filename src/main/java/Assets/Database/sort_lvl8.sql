@@ -3,7 +3,7 @@ VALUES
     (
         'Esprit impénétrable',
         NULL,
-        'Mind blank',
+        'Mind Blank',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -16,7 +16,7 @@ VALUES
     (
         'Aura sacrée',
         NULL,
-        'Holy aura',
+        'Holy Aura',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -29,7 +29,7 @@ VALUES
     (
         'Champ antimagie',
         NULL,
-        'Antimagic field',
+        'Antimagic Field',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -42,7 +42,7 @@ VALUES
     (
         'Contrôle du climat',
         NULL,
-        'Control weather',
+        'Control Weather',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '10 minutes',
@@ -55,7 +55,7 @@ VALUES
     (
         'Formes animales',
         'Métamorphose animale',
-        'Animal shapes',
+        'Animal Shapes',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -94,7 +94,7 @@ VALUES
     (
         'Dominer un monstre',
         'Domination de monstre',
-        'Dominate monster',
+        'Dominate Monster',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -120,7 +120,7 @@ VALUES
     (
         'Mot de pouvoir étourdissant',
         NULL,
-        'Power word stun',
+        'Power Word Stun',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -133,7 +133,7 @@ VALUES
     (
         'Nuage incendiaire',
         NULL,
-        'Incendiary cloud',
+        'Incendiary Cloud',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',

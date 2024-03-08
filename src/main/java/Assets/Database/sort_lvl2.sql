@@ -3,7 +3,7 @@ VALUES
     (
         'Apaisement des émotions',
         NULL,
-        'Calm emotions',
+        'Calm Emotions',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -16,7 +16,7 @@ VALUES
     (
         'Bouche magique',
         NULL,
-        'Magic mouth',
+        'Magic Mouth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 minute',
@@ -29,7 +29,7 @@ VALUES
     (
         'Chauffer le métal',
         'Métal brûlant',
-        'Heat metal',
+        'Heat Metal',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -42,7 +42,7 @@ VALUES
     (
         'Localiser des animaux ou des plantes',
         'Localisation d''animaux ou de plantes',
-        'Locate animals or plants',
+        'Locate Animals or Plants',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -55,7 +55,7 @@ VALUES
     (
         'Messager animal',
         NULL,
-        'Animal messenger',
+        'Animal Messenger',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -81,7 +81,7 @@ VALUES
     (
         'Arme spirituelle',
         NULL,
-        'Spiritual weapon',
+        'Spiritual Weapon',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action bonus',
@@ -107,7 +107,7 @@ VALUES
     (
         'Doux repos',
         'Préservation des morts',
-        'Gentle repose',
+        'Gentle Repose',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -120,7 +120,7 @@ VALUES
     (
         'Flamme éternelle',
         NULL,
-        'Continual flame',
+        'Continual Flame',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -133,7 +133,7 @@ VALUES
     (
         'Lien de protection',
         NULL,
-        'Warding bond',
+        'Warding Bond',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -146,7 +146,7 @@ VALUES
     (
         'Prière de soins',
         'Prière de guérison',
-        'Prayer of healing',
+        'Prayer of Healing',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '10 minutes',
@@ -159,7 +159,7 @@ VALUES
     (
         'Trouver les pièges',
         'Detection des pièges',
-        'Find traps',
+        'Find Traps',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -172,7 +172,7 @@ VALUES
     (
         'Croissance d''épines',
         NULL,
-        'Spike growth',
+        'Spike Growth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -185,7 +185,7 @@ VALUES
     (
         'Lame de feu',
         NULL,
-        'Flame blade',
+        'Flame Blade',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -198,7 +198,7 @@ VALUES
     (
         'Passage sans trace',
         NULL,
-        'Pass without trace',
+        'Pass without Trace',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -224,7 +224,7 @@ VALUES
     (
         'Sens animal',
         NULL,
-        'Beast sense',
+        'Beast Sense',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -237,7 +237,7 @@ VALUES
     (
         'Sphère de feu',
         NULL,
-        'Flaming sphere',
+        'Flaming Sphere',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -250,7 +250,7 @@ VALUES
     (
         'Agrandir/rétrécir',
         'Agrandissement/rétrécissement',
-        'Enlarge/reduce',
+        'Enlarge/Reduce',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -263,7 +263,7 @@ VALUES
     (
         'Amélioration de caractéristique',
         NULL,
-        'Enhance ability',
+        'Enhance Ability',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -276,7 +276,7 @@ VALUES
     (
         'Bourrasque',
         NULL,
-        'Gust of wind',
+        'Gust of Wind',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -315,7 +315,7 @@ VALUES
     (
         'Couronne du dément',
         NULL,
-        'Crown of madness',
+        'Crown of Madness',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -341,7 +341,7 @@ VALUES
     (
         'Détection des pensées',
         NULL,
-        'Detect thoughts',
+        'Detect Thoughts',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -367,7 +367,7 @@ VALUES
     (
         'Force fantasmagorique',
         NULL,
-        'Phantasmal force',
+        'Phantasmal Force',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -380,7 +380,7 @@ VALUES
     (
         'Image miroir',
         NULL,
-        'Miror image',
+        'Miror Image',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -393,7 +393,7 @@ VALUES
     (
         'Immobiliser un humanoïde',
         'Immobilisation de personne',
-        'Hold person',
+        'Hold Person',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -432,7 +432,7 @@ VALUES
     (
         'Modifier son apparence',
         'Modification d''apparence',
-        'Alter self',
+        'Alter Self',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -445,7 +445,7 @@ VALUES
     (
         'Nuée de dagues',
         NULL,
-        'Cloud of daggers',
+        'Cloud of Daggers',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -458,7 +458,7 @@ VALUES
     (
         'Pattes d''araignée',
         NULL,
-        'Spider climb',
+        'Spider Climb',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -471,7 +471,7 @@ VALUES
     (
         'Rayon ardent',
         NULL,
-        'Scorching ray',
+        'Scorching Ray',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -536,7 +536,7 @@ VALUES
     (
         'Voir l''invisible',
         'Détection de l''invisibilité',
-        'See invisibility',
+        'See Invisibility',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -549,7 +549,7 @@ VALUES
     (
         'Aura magique de Nystul',
         NULL,
-        'Nystul''s magic aura',
+        'Nystul''s Magic Aura',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -562,7 +562,7 @@ VALUES
     (
         'Corde enchantée',
         NULL,
-        'Rope trick',
+        'Rope Trick',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -575,7 +575,7 @@ VALUES
     (
         'Flèche acide de Melf',
         NULL,
-        'Melf''s acid arrow',
+        'Melf''s Acid Arrow',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -588,7 +588,7 @@ VALUES
     (
         'Verrou magique',
         NULL,
-        'Arcane lock',
+        'Arcane Lock',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -614,7 +614,7 @@ VALUES
     (
         'Arme magique',
         NULL,
-        'Magic weapon',
+        'Magic Weapon',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action bonus',
@@ -627,7 +627,7 @@ VALUES
     (
         'Frappe lumineuse',
         'Châtiment révélateur',
-        'Branding smite',
+        'Branding Smite',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -640,7 +640,7 @@ VALUES
     (
         'Localiser un objet',
         'Localisation d''objet',
-        'Locate object',
+        'Locate Object',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -652,7 +652,8 @@ VALUES
     ),
     (
         'Protection contre le poison',
-        'Protection from poison',
+        NULL,
+        'Protection from Poison',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -665,7 +666,7 @@ VALUES
     (
         'Restauration inférieure',
         'Restauration partielle',
-        'Lesser restoration',
+        'Lesser Restoration',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -678,7 +679,7 @@ VALUES
     (
         'Trouver une monture',
         'Appel de destrier',
-        'Find steed',
+        'Find Steed',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '10 minutes',
@@ -691,7 +692,7 @@ VALUES
     (
         'Zone de vérité',
         NULL,
-        'Zone of truth',
+        'Zone of Truth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -704,7 +705,7 @@ VALUES
     (
         'Cordon de flèches',
         NULL,
-        'Cordon of arrows',
+        'Cordon of Arrows',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',

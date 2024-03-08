@@ -3,7 +3,7 @@ VALUES
     (
         'Epée de Mordenkainen',
         NULL,
-        'Mordenkainen''s sword',
+        'Mordenkainen''s Sword',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -16,7 +16,7 @@ VALUES
     (
         'Image projetée',
         'Projection d''image',
-        'Project image',
+        'Project Image',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -29,7 +29,7 @@ VALUES
     (
         'Manoir somptueux de Mordenkainen',
         NULL,
-        'Mordenkainen''s magnificent mansion',
+        'Mordenkainen''s Magnificent Mansion',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 minute',
@@ -42,7 +42,7 @@ VALUES
     (
         'Mirage',
         NULL,
-        'Mirage arcane',
+        'Mirage Arcane',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '10 minutes',
@@ -94,7 +94,7 @@ VALUES
     (
         'Invoquer un céleste',
         'Invocation de céleste',
-        'Conjure celestial',
+        'Conjure Celestial',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 minute',
@@ -107,7 +107,7 @@ VALUES
     (
         'Parole divine',
         NULL,
-        'Divine word',
+        'Divine Word',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action bonus',
@@ -120,7 +120,7 @@ VALUES
     (
         'Boule de feu à explosion retardée',
         NULL,
-        'Delayed blast fireball',
+        'Delayed Blast Fireball',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -133,7 +133,7 @@ VALUES
     (
         'Changement de plan',
         NULL,
-        'Plane shift',
+        'Plane Shift',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -146,7 +146,7 @@ VALUES
     (
         'Doigt de mort',
         NULL,
-        'Finger of death',
+        'Finger of Death',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -211,7 +211,7 @@ VALUES
     (
         'Tempête de feu',
         NULL,
-        'Fire storm',
+        'Fire Storm',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',

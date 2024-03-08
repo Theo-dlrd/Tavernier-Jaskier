@@ -3,7 +3,7 @@ VALUES
     (
         'Moquerie cruelle',
         NULL,
-        'Vicious mockery',
+        'Vicious Mockery',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -29,7 +29,7 @@ VALUES
     (
         'Epargner les mourants',
         'Stabilisation',
-        'Spare the dying',
+        'Spare the Dying',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -42,7 +42,7 @@ VALUES
     (
         'Flamme sacrée',
         NULL,
-        'Sacred flame',
+        'Sacred Flame',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -94,7 +94,7 @@ VALUES
     (
         'Fouet épineux',
         NULL,
-        'Thorn whip',
+        'Thorn Whip',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -120,7 +120,7 @@ VALUES
     (
         'Produire une flamme',
         'Flammes',
-        'Produce flame',
+        'Produce Flame',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -146,7 +146,7 @@ VALUES
     (
         'Aspersion acide',
         'Aspersion d''acide',
-        'Acid splash',
+        'Acid Splash',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -159,7 +159,7 @@ VALUES
     (
         'Bouffée de poison',
         NULL,
-        'Poison spray',
+        'Poison Spray',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -172,7 +172,7 @@ VALUES
     (
         'Contact glacial',
         NULL,
-        'Chill touch',
+        'Chill Touch',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -185,7 +185,7 @@ VALUES
     (
         'Illusion mineure',
         NULL,
-        'Minor illusion',
+        'Minor Illusion',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -211,7 +211,7 @@ VALUES
     (
         'Lumières dansantes',
         NULL,
-        'Dancing lights',
+        'Dancing Lights',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -224,7 +224,7 @@ VALUES
     (
         'Main du mage',
         'Main de mage',
-        'Mage hand',
+        'Mage Hand',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -250,7 +250,7 @@ VALUES
     (
         'Poigne électrique',
         NULL,
-        'Shocking grasp',
+        'Shocking Grasp',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -276,7 +276,7 @@ VALUES
     (
         'Protection contre les armes',
         NULL,
-        'Blade ward',
+        'Blade Ward',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -315,7 +315,7 @@ VALUES
     (
         'Trait de feu',
         NULL,
-        'Fire bolt',
+        'Fire Bolt',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -341,7 +341,7 @@ VALUES
     (
         'Explosion occulte',
         'Décharge occulte',
-        'Eldritch blast',
+        'Eldritch Blast',
         0,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',

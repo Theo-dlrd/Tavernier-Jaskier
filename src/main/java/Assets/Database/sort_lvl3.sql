@@ -3,7 +3,7 @@ VALUES
     (
         'Communication avec les morts',
         NULL,
-        'Speak with dead',
+        'Speak with Dead',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -16,7 +16,7 @@ VALUES
     (
         'Communication avec les plantes',
         NULL,
-        'Speak with plants',
+        'Speak with Plants',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -42,7 +42,7 @@ VALUES
     (
         'Feindre la mort',
         'Mort simulée',
-        'Feign death',
+        'Feign Death',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -55,7 +55,7 @@ VALUES
     (
         'Glyphe de protection',
         'Glyphe de garde',
-        'Glyph of warding',
+        'Glyph of Warding',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -68,7 +68,7 @@ VALUES
     (
         'Jeter une malédiction',
         'Malédiction',
-        'Bestow curse',
+        'Bestow Curse',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -94,7 +94,7 @@ VALUES
     (
         'Petite hutte de Léomund',
         NULL,
-        'Leomund''s tiny hut',
+        'Leomund''s Tiny Hut',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 minute',
@@ -107,7 +107,7 @@ VALUES
     (
         'Animation des morts',
         NULL,
-        'Animate dead',
+        'Animate Dead',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 minute',
@@ -133,7 +133,7 @@ VALUES
     (
         'Fusion dans la pierre',
         NULL,
-        'Meld into stone',
+        'Meld into Stone',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -146,7 +146,7 @@ VALUES
     (
         'Lueur d''espoir',
         NULL,
-        'Beacon of hope',
+        'Beacon of Hope',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -159,7 +159,7 @@ VALUES
     (
         'Mot de guérison de groupe',
         NULL,
-        'Mass healing word',
+        'Mass Healing Word',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action bonus',
@@ -172,7 +172,7 @@ VALUES
     (
         'Appel de la foudre',
         NULL,
-        'Call lightning',
+        'Call Lightning',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -185,7 +185,7 @@ VALUES
     (
         'Invoquer des animaux',
         'Invocation d''animaux',
-        'Conjure animals',
+        'Conjure Animals',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -198,7 +198,7 @@ VALUES
     (
         'Mur de vent',
         NULL,
-        'Wind wall',
+        'Wind Wall',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -263,7 +263,7 @@ VALUES
     (
         'Eclair',
         NULL,
-        'Lightning bolt',
+        'Lightning Bolt',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -276,7 +276,7 @@ VALUES
     (
         'Forme gazeuse',
         NULL,
-        'Gaseous form',
+        'Gaseous Form',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -302,7 +302,7 @@ VALUES
     (
         'Image majeure',
         NULL,
-        'Major image',
+        'Major Image',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -341,7 +341,7 @@ VALUES
     (
         'Marche sur l''eau',
         'Marche sur l''onde',
-        'Water walk',
+        'Water Walk',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -354,7 +354,7 @@ VALUES
     (
         'Motif hypnotique',
         NULL,
-        'Hypnotic pattern',
+        'Hypnotic Pattern',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -367,7 +367,7 @@ VALUES
     (
         'Nuage puant',
         'Nuage nauséabond',
-        'Stinking cloud',
+        'Stinking Cloud',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -393,7 +393,7 @@ VALUES
     (
         'Protection contre l''énergie',
         'Protection contre une énergie',
-        'Protection from energy',
+        'Protection from Energy',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -406,7 +406,7 @@ VALUES
     (
         'Respiration aquatique',
         NULL,
-        'Water breathing',
+        'Water Breathing',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -419,7 +419,7 @@ VALUES
     (
         'Tempête de neige',
         NULL,
-        'Sleet storm',
+        'Sleet Storm',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -445,7 +445,7 @@ VALUES
     (
         'Monture fantôme',
         NULL,
-        'Phantom steed',
+        'Phantom Steed',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -458,7 +458,7 @@ VALUES
     (
         'Arme élémentaire',
         NULL,
-        'Elemental weapon'
+        'Elemental Weapon',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -471,7 +471,7 @@ VALUES
     (
         'Aura de vitalité',
         NULL,
-        'Aura of vitality',
+        'Aura of Vitality',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -484,7 +484,7 @@ VALUES
     (
         'Aura du croisé',
         NULL,
-        'Crusader''s mantle'
+        'Crusader''s Mantle',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -497,7 +497,7 @@ VALUES
     (
         'Cercle magique',
         NULL,
-        'Magic circle',
+        'Magic Circle',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 minute',
@@ -510,7 +510,7 @@ VALUES
     (
         'Création de nourriture et d''eau',
         NULL,
-        'Create food and water',
+        'Create Food and Water',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -523,7 +523,7 @@ VALUES
     (
         'Dissipation de la magie',
         NULL,
-        'Dispel magic',
+        'Dispel Magic',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -536,7 +536,7 @@ VALUES
     (
         'Frappe aveuglante',
         'Châtiment aveuglant',
-        'Blinding smite',
+        'Blinding Smite',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -549,7 +549,7 @@ VALUES
     (
         'Lever une malédiction',
         'Délivrance des malédictions',
-        'Remove curse',
+        'Remove Curse',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -588,7 +588,7 @@ VALUES
     (
         'Flèche de foudre',
         NULL,
-        'Lightning arrow',
+        'Lightning Arrow',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action bonus',
@@ -627,7 +627,7 @@ VALUES
     (
         'Caresse du vampire',
         'Toucher du vampire',
-        'Vampiric touch',
+        'Vampiric Touch',
         3,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',

@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Danse irrésistible d''Otto',
+        NULL,
+        'Otto''s Irresistible Dance',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Illusion programmée',
+        NULL,
+        'Programmed Illusion',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Protections et sceaux',
+        NULL,
+        'Guards and Wards',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '10 minutes',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Trouver un chemin',
+        'Sens de l''orientation',
+        'Find the Path',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 minute',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Allié planaire',
+        NULL,
+        'Planar Ally',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '10 minutes',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Barrière de lames',
+        NULL,
+        'Blade Barrier',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Contamination',
+        NULL,
+        'Harm',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 action',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Festin des héros',
+        NULL,
+        'Heroes'' Feast',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '10 minutes',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Guérison',
+        NULL,
+        'Heal',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Interdiction',
+        NULL,
+        'Forbiddance',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '10 minutes',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Mot de retour',
+        NULL,
+        'Word of Recall',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Marche sur le vent',
+        'Vent divin',
+        'Wind Walk',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 minute',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Mur d''épines',
+        NULL,
+        'Wall of Thorns',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Transport végétal',
+        'Voie végétale',
+        'Transport via Plants',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Cercle de mort',
+        NULL,
+        'Circle of Death',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Chaine d''éclairs',
+        'Chaîne d''éclairs',
+        'Chain Lightning',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Déplacer la terre',
+        'Terraformage',
+        'Move Earth',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Désintégration',
+        NULL,
+        'Desintegrate',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Globe d''invulnérabilité',
+        NULL,
+        'Globe of Invulnerability',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Mauvais oeil',
+        NULL,
+        'Eyebite',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -222,6 +262,8 @@ VALUES
     ),
     (
         'Portail magique',
+        'Portail arcanique',
+        'Arcane Gate',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Rayon de soleil',
+        NULL,
+        'Sunbeam',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -244,6 +288,8 @@ VALUES
     ),
     (
         'Suggestion de groupe',
+        NULL,
+        'Mass Suggestion',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Vision suprême',
+        NULL,
+        'True Seeing',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Contingence',
+        'Prévoyance',
+        'Contingency',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '10 minutes',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Convocations instantanées de Drawmij',
+        NULL,
+        'Drawmij''s Instant Summons',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 minute',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Mur de glace',
+        NULL,
+        'Wall of Ice',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -299,6 +353,8 @@ VALUES
     ),
     (
         'Possession',
+        'Urne magique',
+        'Magic Jar',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 minute',
@@ -310,6 +366,8 @@ VALUES
     ),
     (
         'Sphère glacée d''Otiluke',
+        'Sphère glaciale d''Otiluke',
+        'Otiluke''s Freezing Sphere',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -321,6 +379,8 @@ VALUES
     ),
     (
         'Création de mort-vivant',
+        NULL,
+        'Create Undead',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 minute',
@@ -332,6 +392,8 @@ VALUES
     ),
     (
         'Invoquer une fée',
+        'Invocation de fée',
+        'Conjure Fey',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 minute',
@@ -343,6 +405,8 @@ VALUES
     ),
     (
         'Pétrification',
+        NULL,
+        'Flesh to Stone',
         6,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',

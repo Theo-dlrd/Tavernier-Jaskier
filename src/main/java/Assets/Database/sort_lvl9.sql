@@ -16,7 +16,7 @@ VALUES
     (
         'Guérison de groupe',
         NULL,
-        'Mass heal',
+        'Mass Heal',
         9,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -29,7 +29,7 @@ VALUES
     (
         'Résurrection suprême',
         NULL,
-        'True resurrection',
+        'True Resurrection',
         9,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 heure',
@@ -81,7 +81,7 @@ VALUES
     (
         'Mur prismatique',
         NULL,
-        'Prismatic wall',
+        'Prismatic Wall',
         9,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -107,7 +107,7 @@ VALUES
     (
         'Métamorphose suprême',
         NULL,
-        'True polymorph',
+        'True Polymorph',
         9,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -133,7 +133,7 @@ VALUES
     (
         'Projection astrale',
         NULL,
-        'Astral projection',
+        'Astral Projection',
         9,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 heure',
