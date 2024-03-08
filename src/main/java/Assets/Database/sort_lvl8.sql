@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Esprit impénétrable',
+        NULL,
+        'Mind blank',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Aura sacrée',
+        NULL,
+        'Holy aura',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Champ antimagie',
+        NULL,
+        'Antimagic field',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Contrôle du climat',
+        NULL,
+        'Control weather',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '10 minutes',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Formes animales',
+        'Métamorphose animale',
+        'Animal shapes',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Répulsion/attirance',
+        'Aversion/attirance',
+        'Antipathy/Sympathy',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 heure',
@@ -67,6 +79,8 @@ VALUES
         NULL
     ),
     (
+        'Tsunami',
+        NULL,
         'Tsunami',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Dominer un monstre',
+        'Domination de monstre',
+        'Dominate monster',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Eclat du soleil',
+        NULL,
+        'Sunburst',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Mot de pouvoir étourdissant',
+        NULL,
+        'Power word stun',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Nuage incendiaire',
+        NULL,
+        'Incendiary cloud',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Tremblement de terre',
+        NULL,
+        'Earthquake',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -133,6 +157,8 @@ VALUES
         NULL
     ),
     (
+        'Clone',
+        NULL,
         'Clone',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Labyrinthe',
+        'Dédale',
+        'Maze',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Télépathie',
+        NULL,
+        'Telepathy',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Bagou',
+        NULL,
+        'Glibness',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Demi-plan',
+        NULL,
+        'Demiplane',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Esprit faible',
+        NULL,
+        'Feeblemind',
         8,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
