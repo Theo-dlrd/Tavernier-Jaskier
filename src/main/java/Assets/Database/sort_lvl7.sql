@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Epée de Mordenkainen',
+        NULL,
+        'Mordenkainen''s sword',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Image projetée',
+        'Projection d''image',
+        'Project image',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Manoir somptueux de Mordenkainen',
+        NULL,
+        'Mordenkainen''s magnificent mansion',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 minute',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Mirage',
+        NULL,
+        'Mirage arcane',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '10 minutes',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Régénération',
+        NULL,
+        'Regenerate',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 minute',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Résurrection',
+        NULL,
+        'Resurrection',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
         '1 heure',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Symbole',
+        NULL,
+        'Symbol',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 minute',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Invoquer un céleste',
+        'Invocation de céleste',
+        'Conjure celestial',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 minute',
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Parole divine',
+        NULL,
+        'Divine word',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action bonus',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Boule de feu à explosion retardée',
+        NULL,
+        'Delayed blast fireball',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Changement de plan',
+        NULL,
+        'Plane shift',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Doigt de mort',
+        NULL,
+        'Finger of death',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -133,7 +157,9 @@ VALUES
         NULL
     ),
     (
-        'Embruns prismatique',
+        'Embruns prismatiques',
+        'Rayons prismatiques',
+        'Prismatic Spray',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Forme éthérée',
+        NULL,
+        'Etherealness',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Inversion de la gravité',
+        NULL,
+        'Reverse Gravity',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Téléportation',
+        NULL,
+        'Teleport',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Tempête de feu',
+        NULL,
+        'Fire storm',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Séquestration',
+        'Dissimulation',
+        'Sequester',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Simulacre',
+        NULL,
+        'Simulacrum',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '12 heures',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Cage de force',
+        NULL,
+        'Forcecage',
         7,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
