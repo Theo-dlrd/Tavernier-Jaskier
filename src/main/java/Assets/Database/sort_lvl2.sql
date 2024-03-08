@@ -392,6 +392,8 @@ VALUES
     ),
     (
         'Immobiliser un humanoïde',
+        'Immobilisation de personne',
+        'Hold person',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -403,6 +405,8 @@ VALUES
     ),
     (
         'Invisibilité',
+        NULL,
+        'Invisibility',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -414,6 +418,8 @@ VALUES
     ),
     (
         'Lévitation',
+        NULL,
+        'Levitate',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -425,6 +431,8 @@ VALUES
     ),
     (
         'Modifier son apparence',
+        'Modification d''apparence',
+        'Alter self',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -436,6 +444,8 @@ VALUES
     ),
     (
         'Nuée de dagues',
+        NULL,
+        'Cloud of daggers',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -447,6 +457,8 @@ VALUES
     ),
     (
         'Pattes d''araignée',
+        NULL,
+        'Spider climb',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -458,6 +470,8 @@ VALUES
     ),
     (
         'Rayon ardent',
+        NULL,
+        'Scorching ray',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -468,6 +482,8 @@ VALUES
         'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/scorching_ray_spell_baldursgate3_wiki_guide_150px_2.png'
     ),
     (
+        'Suggestion',
+        NULL,
         'Suggestion',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
@@ -480,6 +496,8 @@ VALUES
     ),
     (
         'Ténèbres',
+        NULL,
+        'Darkness',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -491,6 +509,8 @@ VALUES
     ),
     (
         'Toile d''araignée',
+        NULL,
+        'Web',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -502,6 +522,8 @@ VALUES
     ),
     (
         'Vision dans le noir',
+        NULL,
+        'Darkvision',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -513,6 +535,8 @@ VALUES
     ),
     (
         'Voir l''invisible',
+        'Détection de l''invisibilité',
+        'See invisibility',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -524,6 +548,8 @@ VALUES
     ),
     (
         'Aura magique de Nystul',
+        NULL,
+        'Nystul''s magic aura',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -535,6 +561,8 @@ VALUES
     ),
     (
         'Corde enchantée',
+        NULL,
+        'Rope trick',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -546,6 +574,8 @@ VALUES
     ),
     (
         'Flèche acide de Melf',
+        NULL,
+        'Melf''s acid arrow',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -557,6 +587,8 @@ VALUES
     ),
     (
         'Verrou magique',
+        NULL,
+        'Arcane lock',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -568,6 +600,8 @@ VALUES
     ),
     (
         'Aide',
+        NULL,
+        'Aid',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -579,6 +613,8 @@ VALUES
     ),
     (
         'Arme magique',
+        NULL,
+        'Magic weapon',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action bonus',
@@ -590,6 +626,8 @@ VALUES
     ),
     (
         'Frappe lumineuse',
+        'Châtiment révélateur',
+        'Branding smite',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -601,6 +639,8 @@ VALUES
     ),
     (
         'Localiser un objet',
+        'Localisation d''objet',
+        'Locate object',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -612,6 +652,7 @@ VALUES
     ),
     (
         'Protection contre le poison',
+        'Protection from poison',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -623,6 +664,8 @@ VALUES
     ),
     (
         'Restauration inférieure',
+        'Restauration partielle',
+        'Lesser restoration',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -634,6 +677,8 @@ VALUES
     ),
     (
         'Trouver une monture',
+        'Appel de destrier',
+        'Find steed',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '10 minutes',
@@ -645,6 +690,8 @@ VALUES
     ),
     (
         'Zone de vérité',
+        NULL,
+        'Zone of truth',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -656,6 +703,8 @@ VALUES
     ),
     (
         'Cordon de flèches',
+        NULL,
+        'Cordon of arrows',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -667,6 +716,8 @@ VALUES
     ),
     (
         'Envoûtement',
+        'Discours captivant',
+        'Enthrall',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -678,6 +729,8 @@ VALUES
     ),
     (
         'Rayon affaiblissant',
+        NULL,
+        'Ray of Enfeeblement',
         2,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
