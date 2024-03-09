@@ -1,7 +1,9 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
         'Entrave planaire',
+        'Contrat',
+        'Planar Binding',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 heure',
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Eveil',
+        NULL,
+        'Awaken',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '8 heures',
@@ -24,6 +28,8 @@ VALUES
     ),
     (
         'Légende',
+        'Mythes et légendes',
+        'Legend Lore',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '10 minutes',
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Modification de mémoire',
+        NULL,
+        'Modify Memory',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Restauration supérieure',
+        'Restauration suprême',
+        'Greater Restoration',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Soin des blessures de groupe',
+        'Soins de groupe',
+        'Mass Cure Wounds',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Tromperie',
+        'Double illusoire',
+        'Mislead',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -78,6 +92,8 @@ VALUES
         NULL
     ),
     (
+        'Contagion',
+        NULL,
         'Contagion',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Nécromancie'),
@@ -90,6 +106,8 @@ VALUES
     ),
     (
         'Sanctification',
+        NULL,
+        'Hallow',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '24 heures',
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Invoquer un élémentaire',
+        'Invocation d''élémentaire',
+        'Conjure Elemental',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 minute',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Réincarnation',
+        NULL,
+        'Reincarnate',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 heure',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Coquille antivie',
+        NULL,
+        'Antilife Shell',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Animation des objets',
+        'Animation d''objets',
+        'Animate Objects',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Apparence trompeuse',
+        NULL,
+        'Seeming',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Cercle de téléportation',
+        NULL,
+        'Teleportation Circle',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 minute',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Cône de froid',
+        NULL,
+        'Cone of Cold',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Création',
+        NULL,
+        'Creation',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 minute',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Dominer un humanoïde',
+        'Domination de personne',
+        'Dominate Person',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Fléau d''insectes',
+        NULL,
+        'Insect Plague',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Immobiliser un monstre',
+        'Immobilisation de monstre',
+        'Hold Monster',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -222,6 +262,8 @@ VALUES
     ),
     (
         'Mur de pierre',
+        NULL,
+        'Wall of Stone',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Nuage mortel',
+        'Brume mortelle',
+        'Cloudkill',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -244,6 +288,8 @@ VALUES
     ),
     (
         'Télékinésie',
+        NULL,
+        'Telekinesis',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Lien télépathique de Rary',
+        NULL,
+        'Rary''s Telepathic Bond',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Main de Bigby',
+        NULL,
+        'Bigby''s Hand',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Mur de force',
+        NULL,
+        'Wall of Force',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Passe-muraille',
+        NULL,
+        'Passwall',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -299,6 +353,8 @@ VALUES
     ),
     (
         'Cercle de pouvoir',
+        NULL,
+        'Circle of Power',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -310,6 +366,8 @@ VALUES
     ),
     (
         'Coercition mystique',
+        'Quête',
+        'Guess',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -321,6 +379,8 @@ VALUES
     ),
     (
         'Dissipation du mal et du bien',
+        NULL,
+        'Dispel Evil and Good',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -332,6 +392,8 @@ VALUES
     ),
     (
         'Frappe du bannissement',
+        'Châtiment du ban',
+        'Banishing Smite',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action bonus',
@@ -343,6 +405,8 @@ VALUES
     ),
     (
         'Relever les morts',
+        'Rappel à la vie',
+        'Raise Dead',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 heure',
@@ -354,6 +418,8 @@ VALUES
     ),
     (
         'Vague destructrice',
+        NULL,
+        'Destructive Wave',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -365,6 +431,8 @@ VALUES
     ),
     (
         'Carquois magique',
+        'Vif carquois',
+        'Swift Quiver',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action bonus',
@@ -376,6 +444,8 @@ VALUES
     ),
     (
         'Invoquer une volée de projectiles',
+        'Invocation de volée',
+        'Conjure Volley',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -387,6 +457,8 @@ VALUES
     ),
     (
         'Contacter un autre plan',
+        'Contact avec un autre plan',
+        'Contact Other Plan',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 minute',
@@ -398,6 +470,8 @@ VALUES
     ),
     (
         'Rêve',
+        'Songe',
+        'Dream',
         5,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 minute',

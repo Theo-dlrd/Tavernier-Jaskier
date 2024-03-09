@@ -7,6 +7,8 @@ import java.sql.*;
 public class Sort {
 
     private final String nom_sort;
+    private final String alias;
+    private final String nom_sort_en;
     private final int niveau_sort;
     private final String ecole;
     private final String duree_incantation;
@@ -14,11 +16,15 @@ public class Sort {
     private final String composante;
     private final String duree_sort;
     private final String description;
-    public String img_sort;
+
+    protected String img_sort;
+    private boolean rituel;
 
     public Sort(ResultSet res, Connection connexion) throws SQLException {
 
         this.nom_sort = res.getString("nom_sort");
+        this.alias = res.getString("alias");
+        this.nom_sort_en = res.getString("nom_sort_en");
         this.niveau_sort = res.getInt("niveau_sort");
         int id_ecole = res.getInt("ecole_sort");
 
@@ -53,7 +59,15 @@ public class Sort {
         embed.setThumbnail(this.img_sort);
 
         //Nom du sort
-        embed.setTitle(this.nom_sort);
+        String nom_sort = this.nom_sort;
+        if(this.alias!=null){
+            nom_sort = nom_sort.concat(" ("+this.alias+")");
+        }
+        embed.setTitle(nom_sort);
+
+        //Nom du sort en Anglais
+        if(this.nom_sort_en!=null)
+            embed.addField("Anglais", this.nom_sort_en, true);
 
         //Ecole du sort
         if(this.ecole!=null)

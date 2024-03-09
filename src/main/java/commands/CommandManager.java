@@ -13,6 +13,8 @@ import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.sharding.ShardManager;
 import org.jetbrains.annotations.NotNull;
 import net.dv8tion.jda.api.OnlineStatus;
+
+import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,9 @@ import java.sql.Statement;
 
 
 public class CommandManager extends ListenerAdapter {
+    private enum Langues{ FR, EN };
+
+    private ArrayList<String> tabPetitsMots;
 
     private static final ArrayList<String> authorizedUsers;
     static {
@@ -43,6 +48,7 @@ public class CommandManager extends ListenerAdapter {
         this.utilisateur = config.get("DTB_ID");
         this.password = config.get("DTB_PWD");
         this.connexion = DriverManager.getConnection(this.url,this.utilisateur,this.password);
+        extractAndAjoutPetitsMots();
     }
 
 
@@ -62,10 +68,10 @@ public class CommandManager extends ListenerAdapter {
                 try {
                     OptionMapping messageOption = event.getOption("nom");
                     String nomSort = Objects.requireNonNull(messageOption).getAsString();
-                    nomSort = SpellNameCorrection(nomSort);
+                    nomSort = SpellNameCorrection(nomSort, Langues.FR);
 
-                    String queryExact = "SELECT * FROM sort WHERE nom_sort='" + nomSort + "' LIMIT 1;";
-                    String queryAround = "SELECT * FROM sort WHERE nom_sort like '%" + nomSort + "%' LIMIT 1;";
+                    String queryExact = "SELECT * FROM sort WHERE nom_sort='" + nomSort + "' LIMIT 1 OR SELECT * FROM sort WHERE alias='\" + nomSort + \"' LIMIT 1;";
+                    String queryAround = "SELECT * FROM sort WHERE nom_sort like '%" + nomSort + "%' OR SELECT * FROM sort WHERE alias like '%\" + nomSort + \"%';";
 
 
                     Statement statementExact = this.connexion.createStatement();
@@ -94,6 +100,51 @@ public class CommandManager extends ListenerAdapter {
                         }
                         if (i == 0) {
                             event.reply("Aucun sort similaire n'a été trouvé !\nFormat : _Nom du sort_ !").queue();
+                        }
+
+                        resultSetAround.close();
+                        statementAround.close();
+                    }
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            case "spell" -> {
+                try {
+                    OptionMapping messageOption = event.getOption("name");
+                    String nomSort = Objects.requireNonNull(messageOption).getAsString();
+                    nomSort = SpellNameCorrection(nomSort, Langues.EN);
+
+                    String queryExact = "SELECT * FROM sort WHERE nom_sort='" + nomSort + "' LIMIT 1;";
+                    String queryAround = "SELECT * FROM sort WHERE nom_sort like '%" + nomSort + "%';";
+
+
+                    Statement statementExact = this.connexion.createStatement();
+                    ResultSet resultSetExact = statementExact.executeQuery(queryExact);
+
+                    if (resultSetExact.next()) {
+                        event.reply("This spell has been found !").queue();
+                        Sort sortTrouve = new Sort(resultSetExact, this.connexion);
+
+                        event.getChannel().sendMessageEmbeds(sortTrouve.createEmbed().build()).queue();
+
+                        resultSetExact.close();
+                        statementExact.close();
+                    } else {
+                        Statement statementAround = this.connexion.createStatement();
+                        ResultSet resultSetAround = statementAround.executeQuery(queryAround);
+
+                        int i = 0;
+                        while (resultSetAround.next()) {
+                            if (i == 0) {
+                                event.reply("One or more similar spell(s) has been found !").queue();
+                            }
+                            Sort sortTrouve = new Sort(resultSetAround, this.connexion);
+                            event.getChannel().sendMessageEmbeds(sortTrouve.createEmbed().build()).queue();
+                            i++;
+                        }
+                        if (i == 0) {
+                            event.reply("No spell has been found !\nFormat : _Spell Name_ !").queue();
                         }
 
                         resultSetAround.close();
@@ -245,7 +296,10 @@ public class CommandManager extends ListenerAdapter {
         OptionData optionSort = new OptionData(OptionType.STRING, "nom", "Nom du sort que vous recherchez", true);
         commandData.add(Commands.slash("sort","Obtenez la fiche d'un sort à partir de son nom.").addOptions(optionSort));
 
-        commandData.add(Commands.slash("off","Eteindre le bot."));
+        OptionData optionSpell = new OptionData(OptionType.STRING, "name", "Name of the spell you are looking for", true);
+        commandData.add(Commands.slash("spell","Obtain the spell description").addOptions(optionSpell));
+
+        commandData.add(Commands.slash("off","Éteindre le bot."));
 
         commandData.add(Commands.slash("ecoles","Donne les id et noms des types d'écoles."));
 
@@ -258,15 +312,61 @@ public class CommandManager extends ListenerAdapter {
         event.getGuild().updateCommands().addCommands(commandData).queue();
     }
 
-    private String SpellNameCorrection(String nom){
+    private String SpellNameCorrection(String nom, Langues lg){
         if (nom.contains("'")) {
             nom = nom.replace("'", "''");
         }
-        StringBuilder modifName = new StringBuilder(nom);
-        if(modifName.charAt(0) == 'É' || modifName.charAt(0) == 'é'){
-            modifName.setCharAt(0,'e');
+
+        if(lg==Langues.FR) {
+            StringBuilder modifName = new StringBuilder(nom);
+            if (modifName.charAt(0) == 'É' || modifName.charAt(0) == 'é') {
+                modifName.setCharAt(0, 'e');
+            }
+            return modifName.substring(0,1).toUpperCase()+modifName.substring(1).toLowerCase();
         }
 
-        return modifName.substring(0,1).toUpperCase()+modifName.substring(1).toLowerCase();
+        if(lg==Langues.EN){
+            String[] tabSort;
+            String[] tabMots = nom.split(" ");
+            String nom_sort_en = "";
+            if(tabMots.length==1 && tabMots[0].contains("/")){
+                String[] tabMot_slash = tabMots[0].split("/");
+                for (int i=0; i<tabMot_slash.length; i++) {
+                    nom_sort_en = nom_sort_en.concat(tabMot_slash[i].substring(0,1).toUpperCase()+tabMot_slash[i].substring(1).toLowerCase());
+                    if(i<tabMot_slash.length-1){
+                        nom_sort_en = nom_sort_en.concat("/");
+                    }
+                }
+            }
+            else {
+                for(int i=0; i<tabMots.length; i++) {
+                    if (tabPetitsMots.contains(tabMots[i])) {
+                        nom_sort_en = nom_sort_en.concat(tabMots[i].toLowerCase());
+                    }
+                    else {
+                        nom_sort_en = nom_sort_en.concat(tabMots[i].substring(0,1).toUpperCase()+tabMots[i].substring(1).toLowerCase());
+                    }
+
+                    if(i<tabMots.length-1){
+                        nom_sort_en = nom_sort_en.concat(" ");
+                    }
+                }
+            }
+            return nom_sort_en;
+        }
+        return null;
+    }
+
+    private void extractAndAjoutPetitsMots(){
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/main/java/Assets/Database/nonCapitalizeWords.data"));
+            String ligne;
+            while((ligne=br.readLine())!=null){
+                System.out.println("-"+ligne+"-");
+                tabPetitsMots.add(ligne);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

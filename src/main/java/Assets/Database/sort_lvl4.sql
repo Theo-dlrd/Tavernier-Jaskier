@@ -1,6 +1,8 @@
-INSERT INTO sort (nom_sort,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
 VALUES
     (
+        'Compulsion',
+        NULL,
         'Compulsion',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Enchantement'),
@@ -13,6 +15,8 @@ VALUES
     ),
     (
         'Contrôle de l''eau',
+        NULL,
+        'Control Water',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -23,6 +27,8 @@ VALUES
         NULL
     ),
     (
+        'Divination',
+        NULL,
         'Divination',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
@@ -35,6 +41,8 @@ VALUES
     ),
     (
         'Façonnage de la pierre',
+        NULL,
+        'Stone Shape',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '1 action',
@@ -46,6 +54,8 @@ VALUES
     ),
     (
         'Insecte géant',
+        NULL,
+        'Giant Insect',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -57,6 +67,8 @@ VALUES
     ),
     (
         'Invoquer des élémentaires mineurs',
+        'Invocation d''élémentaires mineurs',
+        'Conjure Minor Elementals',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 minute',
@@ -68,6 +80,8 @@ VALUES
     ),
     (
         'Invoquer des êtres des bois',
+        'Invocation d''êtres sylvestres',
+        'Conjure Woodland Beings',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -79,6 +93,8 @@ VALUES
     ),
     (
         'Liane agrippeuse',
+        'Liane avide',
+        'Grasping Vine',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action bonus',
@@ -89,6 +105,8 @@ VALUES
         'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/conjuration_graspingvine-spell-bg3-wiki-guide-150px.png'
     ),
     (
+        'Confusion',
+        NULL,
         'Confusion',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
@@ -101,6 +119,8 @@ VALUES
     ),
     (
         'Dominer une bête',
+        'Domination de bête',
+        'Dominate Beast',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Enchantement'),
         '1 action',
@@ -112,6 +132,8 @@ VALUES
     ),
     (
         'Flétrissement',
+        NULL,
+        'Blight',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Nécromancie'),
         '1 action',
@@ -123,6 +145,8 @@ VALUES
     ),
     (
         'Invisibilité supérieure',
+        'Invisibilité suprême',
+        'Greater Invisibility',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '1 action',
@@ -134,6 +158,8 @@ VALUES
     ),
     (
         'Métamorphose',
+        NULL,
+        'Polymorph',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Transmutation'),
         '1 action',
@@ -145,6 +171,8 @@ VALUES
     ),
     (
         'Mur de feu',
+        NULL,
+        'Wall of Fire',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -156,6 +184,8 @@ VALUES
     ),
     (
         'Peau de pierre',
+        NULL,
+        'Stoneskin',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -167,6 +197,8 @@ VALUES
     ),
     (
         'Porte dimensionnelle',
+        NULL,
+        'Dimension Door',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Invocation'),
         '1 action',
@@ -178,6 +210,8 @@ VALUES
     ),
     (
         'Tempête de grêle',
+        NULL,
+        'Ice Storm',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action',
@@ -189,6 +223,8 @@ VALUES
     ),
     (
         'Assassin imaginaire',
+        NULL,
+        'Phantasmal Killer',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Illusion'),
         '1 action',
@@ -200,6 +236,8 @@ VALUES
     ),
     (
         'Bouclier de feu',
+        NULL,
+        'Fire Shield',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '1 action bonus',
@@ -211,6 +249,8 @@ VALUES
     ),
     (
         'Chien de garde de Mordenkainen',
+        NULL,
+        'Mordenkainen''s Faithful Hound',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -222,6 +262,8 @@ VALUES
     ),
     (
         'Coffre secret de Léomund',
+        NULL,
+        'Leomund''s Secret Chest',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -233,6 +275,8 @@ VALUES
     ),
     (
         'Fabrication',
+        NULL,
+        'Fabricate',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Transmutation'),
         '10 minutes',
@@ -243,7 +287,9 @@ VALUES
         NULL
     ),
     (
-        'oeil magique',
+        'Oeil magique',
+        'Oeil du mage',
+        'Arcane Eye',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Divination'),
         '1 action',
@@ -255,6 +301,8 @@ VALUES
     ),
     (
         'Sanctuaire privé de Mordenkainen',
+        NULL,
+        'Mordenkainen''s Private Sanctum',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Abjuration'),
         '10 minutes',
@@ -266,6 +314,8 @@ VALUES
     ),
     (
         'Sphère résiliente d''Otiluke',
+        NULL,
+        'Otiluke''s Resilient Sphere',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Evocation'),
         '1 action',
@@ -277,6 +327,8 @@ VALUES
     ),
     (
         'Tentacules noirs d''Evard',
+        NULL,
+        'Evard''s Black Tentacles',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole = 'Invocation'),
         '1 action',
@@ -288,6 +340,8 @@ VALUES
     ),
     (
         'Aura de pureté',
+        NULL,
+        'Aura of Purity',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -299,6 +353,8 @@ VALUES
     ),
     (
         'Aura de vie',
+        NULL,
+        'Aura of Life',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -310,6 +366,8 @@ VALUES
     ),
     (
         'Bannissement',
+        NULL,
+        'Banishment',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -321,6 +379,8 @@ VALUES
     ),
     (
         'Frappe assommante',
+        'Châtiment débilitant',
+        'Staggering Smite',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Evocation'),
         '1 action bonus',
@@ -332,6 +392,8 @@ VALUES
     ),
     (
         'Localiser une créature',
+        'Localisation de créature',
+        'Locate Creature',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Divination'),
         '1 action',
@@ -343,6 +405,8 @@ VALUES
     ),
     (
         'Protection contre la mort',
+        NULL,
+        'Death Ward',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Abjuration'),
         '1 action',
@@ -354,6 +418,8 @@ VALUES
     ),
     (
         'Terrain hallucinatoire',
+        NULL,
+        'Hallucinatory Terrain',
         4,
         (SELECT id_ecole FROM ecole WHERE nom_ecole='Illusion'),
         '10 minutes',
