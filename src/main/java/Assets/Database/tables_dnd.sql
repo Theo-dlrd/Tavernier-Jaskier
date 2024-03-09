@@ -21,15 +21,21 @@ CREATE TABLE sort(
     img_sort text
 );
 
-CREATE TABLE sortDeClasse (
+CREATE TABLE sortdeclasse (
     id_sort INT REFERENCES sort(id_sort),
     id_classe INT REFERENCES classe(id_classe),
     niveau_classe INT,
-    info_supp text,
     PRIMARY KEY (id_sort, id_classe)
 );
 
-CREATE TABLE sortRituel(
+CREATE TABLE aptitudeclasse(
+    id_aptitude SERIAL PRIMARy KEY,
+    id_classe INT REFERENCES classe(id_classe),
+    niveau_classe INT,
+    info_supp text
+);
+
+CREATE TABLE sortrituel(
     id_sort INT REFERENCES sort(id_sort) PRIMARY KEY
 );
 
@@ -84,7 +90,7 @@ CREATE TABLE race(
 INSERT INTO race(nom_race)
 VALUES ('Elfe'),('Halfelin'),('Humain'),('Nain'),('Demi-elfe'),('Demi-orc'),('Gnome'),('Sangdragon'),('Tieffelin');
 
-CREATE TABLE sortParClasse(
+CREATE TABLE sortclasse(
     id_classe int REFERENCES classe(id_classe),
     id_sort int REFERENCES sort(id_sort)
 );

@@ -48,6 +48,7 @@ public class CommandManager extends ListenerAdapter {
         this.utilisateur = config.get("DTB_ID");
         this.password = config.get("DTB_PWD");
         this.connexion = DriverManager.getConnection(this.url,this.utilisateur,this.password);
+        this.tabPetitsMots = new ArrayList<>();
         extractAndAjoutPetitsMots();
     }
 
