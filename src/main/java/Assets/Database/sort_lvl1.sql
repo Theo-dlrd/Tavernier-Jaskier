@@ -1,4 +1,4 @@
-INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort)
+INSERT INTO sort (nom_sort,alias,nom_sort_en,niveau_sort,ecole_sort,duree_incantation,portee,composantes,duree_sort,description,img_sort,rituel)
 VALUES
     (
         'Amitié avec les animaux',
@@ -50,7 +50,8 @@ VALUES
         'V, S, M (une perle d''une valeur minimale de 100 po et une plume de hibou)',
         'instantanée',
         'Vous choisissez un objet avec lequel vous devez rester en contact pendant toute l''incantation du sort. Si c''est un objet magique ou un objet imprégné de magie,vous apprenez immédiatement quelles sont ses propriétés et comment vous en servir. Vous savez aussi s''il faut s''harmoniser avec lui pour l''utiliser et combien de charges il possède, le cas échéant. Vous savez si des sorts affectent l''objet et quel est leur nom. Si l''objet a été créé grâce à un sort, vous apprenez quel sort lui a dqnné naissance.' || E'\n' || 'Si,à la place,vous touchez une créature pendant toute l''incantation, vous découvrez quels sorts l''affectent présentement,le cas échéant.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Lueurs féeriques',
@@ -232,7 +233,8 @@ VALUES
         'V, S, M (une pincée de suie et de sel)',
         '1 heure',
         'Pendant toute la durée du sort, vous comprenez le sens littéral de tout langage parlé que vous entendez. Vous comprenez aussi les langues écrites que vous voyez, à condition de toucher la surface sur laquelle on a tracé les mots. Il vous faut 1 minute pour lire une page de texte.' || E'\n' || 'Ce sort ne décode pas les messages secrets compris dans un texte ni les glyphes qui n''appartiennent pas à un langage écrit, comme un symbole magique.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Couleurs dansantes',
@@ -427,7 +429,8 @@ VALUES
         'V, S, M (10 po de charbon, d''encens et d''herbes à faire brûler dans un brasero en laiton)',
         'instantanée',
         'Vous vous attachez les services d''un familier, un esprit qui prend la forme d''un animal de votre choix : une chauve-souris, un chat, un crabe, une grenouille (ou un crapaud), un faucon, un lézard, une pieuvre, une chouette, un serpent venimeux, un poisson (un piranha), un rat, un corbeau, un hippocampe, une araignée ou une belette. Le familier apparaît dans un emplacement inoccupé à portée et possède les mêmes statistiques que l''animal dont il revêt la forme, bien qu''il soit un céleste, une fée ou un fiélon (à vous de choisir) au lieu d''une bête.' || E'\n' || 'Votre familier agit indépendamment de vous, mais il obéit toujours à vos ordres. Lors d''un combat, il lance son propre dé d''initiative et agit à son tour. Il ne peut pas attaquer, mais il peut effectuer d''autres actions normalement.' || E'\n' || 'Quand le familier tombe à 0 point de vie, il disparaît sans laisser de cadavre derrière lui. Il réapparaît si vous lancez de nouveau ce sort.' || E'\n' || 'Vous pouvez communiquer par télépathie avec votre familier tant qu''il se trouve dans un rayon de 30 mètres autour de vous. De plus, vous pouvez dépenser votre action pour percevoir le monde par les yeux et les oreilles de votre familier jusqu''au début de votre prochain tour. Vous bénéficiez aussi de tout sens spécial que possède votre familier. Pendant ce temps, vos yeux et vos oreilles ne fonctionnent plus.' || E'\n' || 'Vous pouvez renvoyer temporairement votre familier par une action. Il gagne alors une poche dimensionnelle où il attend que vous le rappeliez. Vous pouvez aussi le renvoyer définitivement. Vous pouvez utiliser une action alors qu''il est temporairement renvoyé pour le faire réapparaitre dans un emplacement inoccupé situé dans un rayon de 9 mètres autour de vous.' || E'\n' || 'Vous ne pouvez avoir qu''un familier à la fois. Si vous lancez ce sort alors que vous avez déjà un familier, vous attribuez simplement une nouvelle forme à celui que vous possédez déjà choisissez une des formes de la liste précédente, que votre familier adopte de suite.' || E'\n' || 'Enfin, quand vous lancez un sort avec une portée de « contact » votre familier peut délivrer le sort comme si c''était lui qui le lançait. Il doit se trouver à 30 mètres de vous ou moins et utiliser sa réaction pour transmettre le sort au moment où vous le lancez. Si le sort exige un jet d''attaque, vous utilisez votre propre modificateur d''attaque lors du jet.',
-        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/find_familiar_spell_baldursgate3_wiki_guide_150px_2.png'
+        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/find_familiar_spell_baldursgate3_wiki_guide_150px_2.png',
+        true
     ),
     (
         'Disque flottant de Tenser',
@@ -440,7 +443,8 @@ VALUES
         'V, S, M (une goutte de mercure)',
         '1 heure',
         'Ce sort crée un plan de force circulaire horizontal d''un mètre de diamètre pour 2,5 centimètres d''épaisseur. Il flotte à un mètre du sol dans un espace inoccupé de votre choix situé à portée et dans votre champ de vision. Le disque persiste pendant toute la durée du sort et peut accueillir jusqu''à 250 kilos. Si on pose plus de poids dessus, le sort se termine et tout ce qui se trouvait sur le disque tombe à terre.' || E'\n' || 'Le disque reste immobile tant que vous vous tenez dans un rayon de 6 mètres. Si vous vous en éloignez plus que cela, il vous suit de manière à rester dans les 6 mètres autour de vous. Il peut se déplacer sur un terrain irrégulier, monter ou descendre des escaliers, des pentes, etc. Mais il ne peut pas franchir une différence de niveau de trois mètres ou plus.' || E'\n' || 'Par exemple, il ne peut pas passer au-dessus d''une fosse de 3 mètres de profondeur ni la quitter s''il a été formé au fond.' || E'\n' || 'Si vous vous éloignez à plus de 30 mètres du disque (typiquement parce qu''il ne peut pas contourner un obstacle pour vous suivre), le sort se termine.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Graisse',
@@ -492,7 +496,8 @@ VALUES
         'V, S',
         'concentration.jusqu''à 10 minutes',
         'Pendant toute la durée du sort, vous percevez la présence de magie dans un rayon de 9 mètres. Si vous percevez ainsi une magie, vous pouvez dépenser votre action pour discerner une faible aura autour d''une créature ou d''un objet visible dans la zone et imprégné de magie. Vous découvrez aussi à quelle école appartient cette magie, le cas échéant.' || E'\n' || 'Le sort ignore la plupart des obstacles, mais il ne peut pas franchir 30 centimètres de pierre, 2,5 centimètres de métal ordinaire, une mince feuille de plomb, ni 1 mètre de bois ou de terre.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Détection du bien et du mal',
@@ -518,7 +523,8 @@ VALUES
         'V, S, M (un brin d''if )',
         'concentration.jusqu''à 10 minutes',
         'Pendant toute la durée du sort, vous percevez la présence de poisons, de créatures venimeuses et de maladies dans un rayon de 9 mètres autour de vous. Vous déterminez également leur emplacement et identifiez à chaque fois le type de poison, de créature ou de maladie concerné.' || E'\n' || 'Le sort ignore la plupart des obstacles, mais il ne peut pas franchir 30 centimètres de pierre, 2,5 centimètres de métal ordinaire, une mince feuille de plomb, ni 1 mètre de bois ou de terre.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Duel forcé',
@@ -635,7 +641,8 @@ VALUES
         'V, S',
         'instantanée',
         'Toute la nourriture et les boissons non magiques présentes dans une sphère d''un rayon de 1,50 mètre centrée autour d''un point de votre choix situé à portée sont purifiées et débarrassées de tout poison et maladie.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Soin des blessures',
@@ -661,7 +668,8 @@ VALUES
         'V, S, M (une minuscule clochette et un filament en argent)',
         '8 heures',
         'Vous installez une alarme pour vous avertir en cas d''intrusion. Choisissez une porte, une fenêtre ou une zone à portée qui ne fasse pas plus qu''un cube de 6 mètres d''arête. Tant que le sort fait effet, une alarme vous alerte dès qu''une créature de taille Très Petite ou supérieure touche la zone protégée ou y pénètre. Au moment où vous lancez le sort, vous pouvez désigner des créatures qui ne déclencheront pas l''alarme. Vous pouvez aussi choisir si l''alarme sera audible ou mentale.' || E'\n' || 'Une alarme mentale vous avertit d''un tintement dans votre tête tant que vous vous trouvez dans un rayon de 1,5 kilomètre autour de la zone protégée. Ce tintement suffit à vous réveiller si vous êtes endormi.' || E'\n' || 'Une alarme audible émet le même son qu''une cloche d''alerte pendant 10 secondes et retentit dans un rayon de 18 mètres.',
-        NULL
+        NULL,
+        true
     ),
     (
         'Grêle d''épines',
@@ -726,7 +734,8 @@ VALUES
         'V, S, M (un bout de ficelle et un morceau de bois)',
         '1 heure',
         'Ce sort crée une force invisible, dépourvue de forme et d''intellect, mais capable d''accomplir des tâches simples sur votre ordre jusqu''à la fin du sort. Le serviteur se matérialise au sol, dans un emplacement inoccupé situé à portée. Il a une CA de 10, 1 pv, une Force de 2 et il est incapable d''attaquer. S''il tombe à 0 point de vie, le sort se termine.' || E'\n' || 'Une fois à chacun de vos tours, vous pouvez utiliser une action bonus pour ordonner mentalement à votre serviteur de se déplacer d''un maximum de 4,50 mètres et d''interagir avec un objet. Le serviteur peut accomplir des tâches simples, à la portée d''un domestique humain, comme aller chercher des affaires, faire le ménage, repriser, plier les habits, allumer la cheminée, servir les plats et la boisson, etc. Une fois que vous avez donné votre ordre, il fait de son mieux pour y obéir jusqu''à ce qu''il ait terminé. Il attend alors l''ordre suivant.' || E'\n' || 'Si vous ordonnez à votre serviteur d''accomplir une tâche qui l''éloigne à plus de 18 mètres de vous, le sort se termine.',
-        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/faerie_fire_spell_baldursgate3_wiki_guide_150px_2.png'
+        'https://baldursgate3.wiki.fextralife.com/file/Baldurs-Gate-3/faerie_fire_spell_baldursgate3_wiki_guide_150px_2.png',
+        true
     ),
     (
         'Tentacules d''Hadar',
@@ -752,5 +761,6 @@ VALUES
         'S, M (de l''encre à base de plomb valant au minimum 10 po, que le sort consume)',
         '10 jours',
         'Vous écrivez sur un papier, un parchemin ou un autre matériau adapté à l''écriture et l''imprégnez d''une puissante illusion qui persiste pendant toute la durée du sort.' || E'\n' || 'À vos yeux et à ceux de toutes les créatures que vous désignez lors de l''incantation, l''écriture semble normale, de votre main, et transmet le message que vous aviez en tête en rédigeant le texte. Pour les autres personnes, vos écrits semblent appartenir à une langue inconnue ou magique complètement inintelligible, ou alors ils transmettent un message complètement différent de la réalité, rédigé d''une main qui n''est pas la vôtre et dans une autre langue de votre connaissance.' || E'\n' || 'Si quelqu''un dissipe le sort, l''illusion disparaît, mais le message original aussi.' || E'\n' || 'Une créature dotée de vision parfaite est capable de lire le message original.',
-        NULL
+        NULL,
+        true
     );

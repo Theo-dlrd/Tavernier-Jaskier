@@ -18,25 +18,23 @@ CREATE TABLE sort(
     composantes text,
     duree_sort varchar(200),
     description text,
-    img_sort text
+    img_sort text,
+    rituel boolean
 );
 
-CREATE TABLE sortdeclasse (
-    id_sort INT REFERENCES sort(id_sort),
-    id_classe INT REFERENCES classe(id_classe),
+CREATE TABLE sortclasse (
+    id_classe int REFERENCES classe(id_classe),
+    id_sort int REFERENCES sort(id_sort),
     niveau_classe INT,
     PRIMARY KEY (id_sort, id_classe)
 );
 
 CREATE TABLE aptitudeclasse(
-    id_aptitude SERIAL PRIMARy KEY,
+    id_aptitude SERIAL,
     id_classe INT REFERENCES classe(id_classe),
     niveau_classe INT,
-    info_supp text
-);
-
-CREATE TABLE sortrituel(
-    id_sort INT REFERENCES sort(id_sort) PRIMARY KEY
+    description text,
+    PRIMARY KEY (id_aptitude,id_classe)
 );
 
 
@@ -89,11 +87,6 @@ CREATE TABLE race(
 
 INSERT INTO race(nom_race)
 VALUES ('Elfe'),('Halfelin'),('Humain'),('Nain'),('Demi-elfe'),('Demi-orc'),('Gnome'),('Sangdragon'),('Tieffelin');
-
-CREATE TABLE sortclasse(
-    id_classe int REFERENCES classe(id_classe),
-    id_sort int REFERENCES sort(id_sort)
-);
 
 INSERT INTO sortclasse
 VALUES
