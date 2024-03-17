@@ -9,10 +9,10 @@ import javax.security.auth.login.LoginException;
 import java.sql.*;
 
 
-public class Jaskier {
+public class Volo {
 
 
-    public Jaskier() throws LoginException, ClassNotFoundException, SQLException {
+    public Volo() throws LoginException, ClassNotFoundException, SQLException {
 
         Dotenv config = Dotenv.configure().load();
         String token = config.get("TOKEN");
@@ -35,7 +35,7 @@ public class Jaskier {
     public static void main(String[] args) {
 
         try {
-            new Jaskier();
+            new Volo();
         }
         catch(LoginException e){
             System.out.println("ERREUR : Token non valide !");
