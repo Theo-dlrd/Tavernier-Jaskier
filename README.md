@@ -29,4 +29,4 @@ Aucune documentaition n'as encore été réalisée. Celle-ci étant en cours de 
 
 ## Contributions
 
-Les contributions à ce projet sont les bienvenues ! Si vous avez des idées d'amélioration ou des bugs à signaler, n'hésitez pas à créer une issue ou une pull request.
+Les contributions à ce projet sont les bienvenues ! Si vous avez des idées d'améliorations ou des bugs à signaler, n'hésitez pas à créer une issue, pull request ou à m'adresser un mail : ```theo.duluard7AROBASEgmail.com```.
