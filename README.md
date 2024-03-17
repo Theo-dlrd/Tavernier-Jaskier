@@ -4,15 +4,14 @@ Bienvenue dans le README du projet "Volo".
 
 ## Introduction
 
-Ce projet est un bot discord ayant pour objectif de répertorier tous les sorts, monstres et objets de Donjons & Dragons 5.0.
+Ce projet est un bot discord ayant pour mission de répertorier tous les sorts, monstres et objets de Donjons & Dragons 5.0.
 Dans cet univers, Volo, ou Volothamp Geddarm, est un sorcier et sage très célèbre. Toujours avide de connaissance.
 Raison pour laquelle ce bot a pris ce nom.
+L'objectif de ce projet personnel est de devenir un support pour le maître du jeu et les joueurs de Jeux de rôles dans l'univers fatastique de DND. 
 
 ## Utilisation
 
-Pour utiliser Volo, c'est très simple :
-1 - Vous téléchargez l'archive du projet dans Github.
-2 - Lancez le fichier ``` Volo.java ```
+La version actuelle n'étant pas encore exploitable, cette section sera rempli très prochainement...
 
 ## Fonctionnalités
 
